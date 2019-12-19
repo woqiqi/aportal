@@ -15,8 +15,8 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://shuishan-tech.github.io/aportal/
-root: /
+url: https://shuishan-tech.github.io/aportal
+root: /aportal/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
