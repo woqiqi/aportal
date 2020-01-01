@@ -30,7 +30,6 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
 skip_render:
 
 # Writing
@@ -95,9 +94,10 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: front
 
-# Deployment
+# Deployment 
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+favicon: aportal.ico

@@ -1,0 +1,60 @@
+ <!-- JS Global Compulsory -->
+ <%- js('js/vendor/jquery/dist/jquery.min')%>
+ <%- js('js/vendor/jquery-migrate/dist/jquery-migrate.min')%>
+ <%- js('js/vendor/popper.js/dist/umd/popper.min')%>
+ <%- js('js/vendor/bootstrap/bootstrap.min')%>
+ <%- js('js/vendor/hs-megamenu/src/hs.megamenu')%>
+ <%- js('js/vendor/svg-injector/dist/svg-injector.min')%>
+ <%- js('js/vendor/jquery-validation/dist/jquery.validate.min')%>
+ <%- js('js/vendor/slick-carousel/slick/slick')%>
+
+ <%- js('js/js/hs.core')%>
+ <%- js('js/js/components/hs.header')%>
+ <%- js('js/js/components/hs.unfold')%>
+ <%- js('js/js/components/hs.svg-injector')%>
+ <%- js('js/js/components/hs.validation')%>
+ <%- js('js/js/components/hs.slick-carousel')%>
+ <%- js('js/js/components/hs.go-to')%>
+
+ <!-- JS Plugins Init. -->
+ <script>
+   $(window).on('load', function () {
+     // initialization of HSMegaMenu component
+     $('.js-mega-menu').HSMegaMenu({
+       event: 'hover',
+       pageContainer: $('.container'),
+       breakpoint: 767.98,
+       hideTimeOut: 0
+     });
+
+     // initialization of svg injector module
+     $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
+   });
+
+   $(document).on('ready', function () {
+     // initialization of header
+     $.HSCore.components.HSHeader.init($('#header'));
+
+     // initialization of unfold component
+     $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+       afterOpen: function () {
+         $(this).find('input[type="search"]').focus();
+       }
+     });
+
+     // initialization of form validation
+     $.HSCore.components.HSValidation.init('.js-validate', {
+       rules: {
+         confirmPassword: {
+           equalTo: '#signupPassword'
+         }
+       }
+     });
+
+     // initialization of slick carousel
+     $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
+     // initialization of go to
+     $.HSCore.components.HSGoTo.init('.js-go-to');
+   });
+ </script>
