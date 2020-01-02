@@ -1,0 +1,224 @@
+ <!-- ========== HEADER ========== -->
+ <header id="header" class="u-header u-header--abs-top-md u-header--bg-transparent u-header--show-hide-md"
+ data-header-fix-moment="500"
+ data-header-fix-effect="slide">
+<div class="u-header__section">
+<!-- Topbar -->
+<div class="container u-header__hide-content pt-2">
+<div class="d-flex align-items-center">
+   <!-- Language -->
+   <div class="position-relative">
+    <a id="languageDropdownInvoker" class="dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;" role="button"
+       aria-controls="languageDropdown"
+       aria-haspopup="true"
+       aria-expanded="false"
+       data-unfold-event="hover"
+       data-unfold-target="#languageDropdown"
+       data-unfold-type="css-animation"
+       data-unfold-duration="300"
+       data-unfold-delay="300"
+       data-unfold-hide-on-scroll="true"
+       data-unfold-animation-in="slideInUp"
+       data-unfold-animation-out="fadeOut">
+       <img class="dropdown-item-icon" src="images/cn.svg" alt="SVG">
+      <span class="d-inline-block d-sm-none">zh-CN</span>
+      <span class="d-none d-sm-inline-block">中文</span>
+    </a>
+
+    <div id="languageDropdown" class="dropdown-menu dropdown-unfold" aria-labelledby="languageDropdownInvoker">
+      <a class="dropdown-item active" href="#">中文</a>
+      <a class="dropdown-item" href="#">English</a>
+    </div>
+  </div>
+  <!-- End Language -->
+ <div class="ml-auto">
+   <!-- Jump To -->
+   <div class="d-inline-block d-sm-none position-relative mr-2">
+     <a id="jumpToDropdownInvoker" class="dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;" role="button"
+        aria-controls="jumpToDropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        data-unfold-event="hover"
+        data-unfold-target="#jumpToDropdown"
+        data-unfold-type="css-animation"
+        data-unfold-duration="300"
+        data-unfold-delay="300"
+        data-unfold-hide-on-scroll="true"
+        data-unfold-animation-in="slideInUp"
+        data-unfold-animation-out="fadeOut">
+       Jump to
+     </a>
+
+     <div id="jumpToDropdown" class="dropdown-menu dropdown-unfold" aria-labelledby="jumpToDropdownInvoker">
+       <a class="dropdown-item" href="../../html/pages/contacts-agency.html">联系我们</a>
+     </div>
+   </div>
+   <!-- End Jump To -->
+
+   <!-- Links -->
+   <div class="d-none d-sm-inline-block ml-sm-auto">
+     <ul class="list-inline mb-0">
+       <li class="list-inline-item mr-0">
+         <a class="u-header__navbar-link" href="../pages/contacts-agency.html">联系我们</a>
+       </li>
+     </ul>
+   </div>
+   <!-- End Links -->
+ </div>
+
+ <ul class="list-inline ml-2 mb-0">
+   <!-- Search -->
+   <li class="list-inline-item">
+     <a id="searchSlideDownInvoker" class="btn btn-xs btn-icon btn-text-secondary u-search-slide-down-trigger" href="javascript:;" role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="searchSlideDown"
+        data-unfold-type="css-animation"
+        data-unfold-hide-on-scroll="false"
+        data-unfold-target="#searchSlideDown"
+        data-unfold-animation-in="active"
+        data-unfold-animation-out="fadeOutUp"
+        data-unfold-delay="0"
+        data-unfold-duration="800"
+        data-unfold-overlay='{
+         "className": "u-search-slide-down-bg-overlay",
+         "background": "rgba(55, 125, 255, .1)",
+         "animationSpeed": 400
+        }'>
+       <span class="fas fa-search btn-icon__inner u-search-slide-down-trigger__icon"></span>
+     </a>
+   </li>
+   <!-- End Search -->
+
+   <!-- Account Login -->
+   <li class="list-inline-item">
+     <!-- Account Sidebar Toggle Button -->
+     <a id="sidebarNavToggler" class="btn btn-xs btn-icon btn-text-secondary" href="javascript:;" role="button"
+        aria-controls="sidebarContent"
+        aria-haspopup="true"
+        aria-expanded="false"
+        data-unfold-event="click"
+        data-unfold-hide-on-scroll="false"
+        data-unfold-target="#sidebarContent"
+        data-unfold-type="css-animation"
+        data-unfold-animation-in="fadeInRight"
+        data-unfold-animation-out="fadeOutRight"
+        data-unfold-duration="500">
+       <span class="fas fa-user-circle btn-icon__inner font-size-1"></span>
+     </a>
+     <!-- End Account Sidebar Toggle Button -->
+   </li>
+   <!-- End Account Login -->
+ </ul>
+</div>
+</div>
+<!-- End Topbar -->
+
+<div id="logoAndNav" class="container">
+<!-- Nav -->
+<nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
+ <!-- Logo -->
+ <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center" href="index.html" aria-label="Front">
+  <img src="images/Aportal.svg" alt="" width="150px" height="80px">
+  <!-- <span class="u-header__navbar-brand-text">portal</span> -->
+ </a>
+ <!-- End Logo -->
+
+ <!-- Responsive Toggle Button -->
+ <button type="button" class="navbar-toggler btn u-hamburger"
+         aria-label="Toggle navigation"
+         aria-expanded="false"
+         aria-controls="navBar"
+         data-toggle="collapse"
+         data-target="#navBar">
+   <span id="hamburgerTrigger" class="u-hamburger__box">
+     <span class="u-hamburger__inner"></span>
+   </span>
+ </button>
+ <!-- End Responsive Toggle Button -->
+
+ <!-- Navigation -->
+ <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+   <ul class="navbar-nav u-header__navbar-nav">
+     <!-- Home -->
+     <li class="nav-item hs-has-mega-menu u-header__nav-item"
+         data-event="hover"
+         data-animation-in="slideInUp"
+         data-animation-out="fadeOut"
+         data-position="left">
+       <a id="homeMegaMenu" class="nav-link u-header__nav-link" href="javascript:;" aria-haspopup="true" aria-expanded="false">首页</a>
+
+       <!-- Home - Mega Menu -->
+       <!-- End Home - Mega Menu -->
+     </li>
+     <!-- End Home -->
+
+     <!-- Pages -->
+     <li class="nav-item hs-has-sub-menu u-header__nav-item"
+         data-event="hover"
+         data-animation-in="slideInUp"
+         data-animation-out="fadeOut">
+       <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">文档</a>
+
+       <!-- Pages - Submenu -->
+       <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/card-style.html">开始使用</a></li>
+        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/listing.html">基本功能</a></li>
+        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/blog-profile.html">组织结构管理</a></li>
+        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/single-article.html">流程管理</a></li>
+        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/single-article.html">表单设计</a></li>
+        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/single-article.html">自定义开发</a></li>
+      </ul>
+       <!-- End Pages - Submenu -->
+     </li>
+     <!-- End Pages -->
+
+     <!-- Blog -->
+     <li class="nav-item hs-has-sub-menu u-header__nav-item"
+         data-event="hover"
+         data-animation-in="slideInUp"
+         data-animation-out="fadeOut">
+       <a id="blogMegaMenu" class="nav-link u-header__nav-link" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">视频</a>
+
+       <!-- Blog - Submenu -->
+      
+       <!-- End Submenu -->
+     </li>
+     <!-- End Blog -->
+
+     <!-- Shop -->
+     <li class="nav-item hs-has-mega-menu u-header__nav-item"
+         data-event="hover"
+         data-animation-in="slideInUp"
+         data-animation-out="fadeOut"
+         data-max-width="440px"
+         data-position="right">
+       <a id="shopMegaMenu" class="nav-link u-header__nav-link" href="javascript:;" aria-haspopup="true" aria-expanded="false">博客</a>
+
+       <!-- Shop - Mega Menu -->
+       <!-- End Shop - Mega Menu -->
+     </li>
+     <!-- End Shop -->
+
+     <!-- Demos -->
+     <li class="nav-item hs-has-mega-menu u-header__nav-item"
+         data-event="hover"
+         data-animation-in="slideInUp"
+         data-animation-out="fadeOut"
+         data-max-width="900px"
+         data-position="right">
+       <a id="demosMegaMenu" class="nav-link u-header__nav-link" href="javascript:;" aria-haspopup="true" aria-expanded="false">关于</a>
+
+       <!-- Demos - Mega Menu -->
+       <!-- End Demos - Mega Menu -->
+     </li>
+     <!-- End Demos -->
+   </ul>
+ </div>
+ <!-- End Navigation -->
+</nav>
+<!-- End Nav -->
+</div>
+</div>
+</header>
+<!-- ========== END HEADER ========== -->
