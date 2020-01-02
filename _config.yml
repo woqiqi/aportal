@@ -100,4 +100,3 @@ theme: front
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
-favicon: aportal.ico
