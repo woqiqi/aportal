@@ -1,10 +1,15 @@
 {
-    "currentVersion": "0.0.1",
+    "currentVersion": "0.0.2",
     "versions": [
         {
             "version": "0.0.1",
             "date": "2019-12-31",
             "description": "Beta 1 to test."
+        },
+        {
+            "version": "0.0.2",
+            "date": "2020-1-2",
+            "description": "Add some lists and fields."
         }
     ]
 }
