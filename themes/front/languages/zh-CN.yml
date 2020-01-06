@@ -17,3 +17,11 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+sidebar:
+  docs:
+    startUsing: 开始使用
+    basicFunction: 基本功能
+    organizationalStructureManagement: 组织结构管理
+    processManagement: 流程管理
+    formDesign: 表单设计
+    customDevelopment: 自定义开发

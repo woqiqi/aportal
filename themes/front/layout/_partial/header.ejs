@@ -20,8 +20,8 @@
        data-unfold-hide-on-scroll="true"
        data-unfold-animation-in="slideInUp"
        data-unfold-animation-out="fadeOut">
-       <img class="dropdown-item-icon" src="images/cn.svg" alt="SVG">
-      <span class="d-inline-block d-sm-none">zh-CN</span>
+       <img class="dropdown-item-icon" src="<%= url_for('images/cn.svg') %>" alt="SVG">
+      <span class="d-inline-block d-sm-none">中文</span>
       <span class="d-none d-sm-inline-block">中文</span>
     </a>
 
@@ -33,7 +33,7 @@
   <!-- End Language -->
  <div class="ml-auto">
    <!-- Jump To -->
-   <div class="d-inline-block d-sm-none position-relative mr-2">
+   <!-- <div class="d-inline-block d-sm-none position-relative mr-2">
      <a id="jumpToDropdownInvoker" class="dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;" role="button"
         aria-controls="jumpToDropdown"
         aria-haspopup="true"
@@ -52,11 +52,11 @@
      <div id="jumpToDropdown" class="dropdown-menu dropdown-unfold" aria-labelledby="jumpToDropdownInvoker">
        <a class="dropdown-item" href="../../html/pages/contacts-agency.html">联系我们</a>
      </div>
-   </div>
+   </div> -->
    <!-- End Jump To -->
 
    <!-- Links -->
-   <div class="d-none d-sm-inline-block ml-sm-auto">
+   <div class="d-sm-inline-block ml-sm-auto">
      <ul class="list-inline mb-0">
        <li class="list-inline-item mr-0">
          <a class="u-header__navbar-link" href="../pages/contacts-agency.html">联系我们</a>
@@ -119,7 +119,7 @@
 <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
  <!-- Logo -->
  <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center" href="index.html" aria-label="Front">
-  <img src="images/Aportal.svg" alt="" width="150px" height="80px">
+  <img src="<%= url_for('images/Aportal.svg') %>" alt="" width="150px" height="80px">
   <!-- <span class="u-header__navbar-brand-text">portal</span> -->
  </a>
  <!-- End Logo -->
@@ -158,11 +158,11 @@
          data-event="hover"
          data-animation-in="slideInUp"
          data-animation-out="fadeOut">
-       <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">文档</a>
+       <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="<%= url_for('docs')%>" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">文档</a>
 
        <!-- Pages - Submenu -->
        <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/card-style.html">开始使用</a></li>
+        <li><a class="nav-link u-header__sub-menu-nav-link" href="<%= url_for('docs')%>">开始使用</a></li>
         <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/listing.html">基本功能</a></li>
         <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/blog-profile.html">组织结构管理</a></li>
         <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/single-article.html">流程管理</a></li>
