@@ -54,9 +54,31 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
   if (typeof sidebar === 'undefined') {
     return '';
   }
-  for (const [link, menu] of Object.entries(sidebar)) {
-    result += `<li class="hs-sidebar__item"><a href="${menu}" class="hs-sidebar__link ${menu==path?'active':''}" >${self.__(prefix + link)}</a></li>`;
+  for (const [title, menu] of Object.entries(sidebar)) {
+    for (const [text, link] of Object.entries(menu)) {
+      if(text=='index'){
+        result += `<h5 class="hs-sidebar__heading"><a href="${link}">${self.__(prefix + title)}</a><ul class="hs-sidebar__nav">`;
+      }else{
+        result += `<li class="hs-sidebar__item"><a href="${link}" class="hs-sidebar__link ${link==path?'active':''}" >${self.__(prefix + text)}</a></li>`;
+      }
+    }
+    result +='</ul>'
   }
+  return result;
+});
 
+hexo.extend.helper.register('header_doc_sidebar', function(className) {
+  const sidebar = this.site.data.sidebar['docs'];
+  // const path = basename(this.path);
+  let result = '';
+  const self = this;
+  const prefix = 'sidebar.docs.';
+  for (const [title, menu] of Object.entries(sidebar)) {
+    for (const [text, link] of Object.entries(menu)) {
+      if(text=='index'){
+        result += `<li><a class="nav-link u-header__sub-menu-nav-link" href="${self.url_for('docs/'+link)}">${self.__(prefix + title)}</a></li>`;
+      }
+    }
+  }
   return result;
 });

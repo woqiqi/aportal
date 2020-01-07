@@ -20,8 +20,13 @@ tag: Tag
 sidebar:
   docs:
     startUsing: 开始使用
-    basicFunction: 基本功能
-    organizationalStructureManagement: 组织结构管理
+    getReady: 准备
+    install: 安装
+    initialSetup: 初始设置
+    exampleProject: 示例项目
+    detailedExplanation: 使用详解
+    organizationalStructureManagement: 组织机构管理
     processManagement: 流程管理
     formDesign: 表单设计
     customDevelopment: 自定义开发
+    commonProblem: 常见问题

@@ -1,7 +1,16 @@
 docs:
-  startUsing: index.html
-  basicFunction: setup.html
-  organizationalStructureManagement: configuration.html
-  processManagement: commands.html
-  formDesign: troubleshooting.html
-  customDevelopment: contributing.html
+  startUsing: 
+    index: index.html
+    getReady: getReady.html
+    install: install.html
+    initialSetup: initialSetup.html
+  exampleProject: 
+    index: exampleProjectIndex.thml
+  detailedExplanation: 
+    index: detailedExplanation.html
+    organizationalStructureManagement: structureManagement.html
+    processManagement: processManagement.html
+    formDesign: formDesign.html
+    customDevelopment: customDevelopment.html
+  commonProblem: 
+    index: commonProblemIndex.html
