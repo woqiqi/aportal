@@ -1,16 +1,16 @@
 docs:
   startUsing: 
-    index: index.html
+    # index: index.html
     getReady: getReady.html
     install: install.html
     initialSetup: initialSetup.html
   exampleProject: 
-    index: exampleProjectIndex.thml
+    # index: exampleProjectIndex.thml
   detailedExplanation: 
-    index: detailedExplanation.html
+    # index: detailedExplanation.html
     organizationalStructureManagement: structureManagement.html
     processManagement: processManagement.html
     formDesign: formDesign.html
     customDevelopment: customDevelopment.html
   commonProblem: 
-    index: commonProblemIndex.html
+    # index: commonProblemIndex.html

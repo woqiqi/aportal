@@ -16,25 +16,26 @@
  <%- js('js/js/components/hs.validation')%>
  <%- js('js/js/components/hs.slick-carousel')%>
  <%- js('js/js/components/hs.go-to')%>
+ <%- js('js/js/components/hs.scroll-nav')%>
  <%- js('js/script')%>
 
  <!-- JS Plugins Init. -->
  <script>
    $(window).on('load', function () {
-      var typed = new Typed(".u-text-animation.u-text-animation--typing", {
-        strings: ["简洁!", "高效!", "先进!"],
-        typeSpeed: 60,
-        loop: true,
-        backSpeed: 25,
-        backDelay: 1500
-      });
-     // initialization of HSMegaMenu component
-     $('.js-mega-menu').HSMegaMenu({
-       event: 'hover',
-       pageContainer: $('.container'),
-       breakpoint: 767.98,
-       hideTimeOut: 0
-     });
+    //   var typed = new Typed(".u-text-animation.u-text-animation--typing", {
+    //     strings: ["简洁!", "高效!", "先进!"],
+    //     typeSpeed: 60,
+    //     loop: true,
+    //     backSpeed: 25,
+    //     backDelay: 1500
+    //   });
+    //  // initialization of HSMegaMenu component
+    //  $('.js-mega-menu').HSMegaMenu({
+    //    event: 'hover',
+    //    pageContainer: $('.container'),
+    //    breakpoint: 767.98,
+    //    hideTimeOut: 0
+    //  });
 
      // initialization of svg injector module
      $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
