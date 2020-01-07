@@ -1,25 +1,60 @@
-<% if (config.disqus_shortname){ %>
-<script>
-  var disqus_shortname = '<%= config.disqus_shortname %>';
-  <% if (page.permalink){ %>
-  var disqus_url = '<%= page.permalink %>';
-  <% } %>
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<% } %>
+ <!-- JS Global Compulsory -->
+ <%- js('js/vendor/jquery/dist/jquery.min')%>
+ <%- js('js/vendor/jquery-migrate/dist/jquery-migrate.min')%>
+ <%- js('js/vendor/popper.js/dist/umd/popper.min')%>
+ <%- js('js/vendor/bootstrap/bootstrap.min')%>
+ <%- js('js/vendor/hs-megamenu/src/hs.megamenu')%>
+ <%- js('js/vendor/svg-injector/dist/svg-injector.min')%>
+ <%- js('js/vendor/jquery-validation/dist/jquery.validate.min')%>
+ <%- js('js/vendor/slick-carousel/slick/slick')%>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+ <%- js('js/js/hs.core')%>
+ <%- js('js/js/components/hs.header')%>
+ <%- js('js/js/components/hs.unfold')%>
+ <%- js('js/js/components/hs.svg-injector')%>
+ <%- js('js/js/components/hs.validation')%>
+ <%- js('js/js/components/hs.slick-carousel')%>
+ <%- js('js/js/components/hs.go-to')%>
 
-<% if (theme.fancybox){ %>
-  <%- css('fancybox/jquery.fancybox') %>
-  <%- js('fancybox/jquery.fancybox.pack') %>
-<% } %>
+ <!-- JS Plugins Init. -->
+ <script>
+   $(window).on('load', function () {
+     // initialization of HSMegaMenu component
+     $('.js-mega-menu').HSMegaMenu({
+       event: 'hover',
+       pageContainer: $('.container'),
+       breakpoint: 767.98,
+       hideTimeOut: 0
+     });
 
-<%- js('js/script') %>
-<%- partial('gauges-analytics') %>
+     // initialization of svg injector module
+     $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
+   });
+
+   $(document).on('ready', function () {
+     // initialization of header
+     $.HSCore.components.HSHeader.init($('#header'));
+
+     // initialization of unfold component
+     $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+       afterOpen: function () {
+         $(this).find('input[type="search"]').focus();
+       }
+     });
+
+     // initialization of form validation
+     $.HSCore.components.HSValidation.init('.js-validate', {
+       rules: {
+         confirmPassword: {
+           equalTo: '#signupPassword'
+         }
+       }
+     });
+
+     // initialization of slick carousel
+     $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
+     // initialization of go to
+     $.HSCore.components.HSGoTo.init('.js-go-to');
+   });
+ </script>

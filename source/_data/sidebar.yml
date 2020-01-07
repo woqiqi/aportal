@@ -1,0 +1,7 @@
+docs:
+  startUsing: index.html
+  basicFunction: setup.html
+  organizationalStructureManagement: configuration.html
+  processManagement: commands.html
+  formDesign: troubleshooting.html
+  customDevelopment: contributing.html

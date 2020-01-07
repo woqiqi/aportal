@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: APortal for Office 365
+title: APortal
 subtitle: ''
 description: ''
 keywords:
@@ -30,12 +30,11 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
 skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
-default_layout: post
+default_layout: page
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
@@ -95,9 +94,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: front
 
-# Deployment
+# Deployment 
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
