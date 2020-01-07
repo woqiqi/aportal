@@ -162,12 +162,7 @@
 
        <!-- Pages - Submenu -->
        <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="<%= url_for('docs')%>">开始使用</a></li>
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/listing.html">基本功能</a></li>
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/blog-profile.html">组织结构管理</a></li>
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/single-article.html">流程管理</a></li>
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/single-article.html">表单设计</a></li>
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/single-article.html">自定义开发</a></li>
+        <%- header_doc_sidebar() %>
       </ul>
        <!-- End Pages - Submenu -->
      </li>

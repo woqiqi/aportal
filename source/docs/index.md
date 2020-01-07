@@ -7,13 +7,15 @@ date: 2020-01-03 14:28:17
 APortal for Office 365 系列文章是针对 APortal 的产品使用介绍。APortal 基于微软Office 365 ，为 Office 365 和企业用户带来技术增值和业务增值。
 
 ### 什么是 Office 365？
-
-> 由于各个国家的政策和法规有所不同，所以 Office 365 在全球一共有 4 个版本：全球版，美国政府版，德国版及处于中国的世纪互联运营版。以下内容以`全球版` E5 开发者版本 为基础进行介绍。
+{% myTitle aaa %}{% endmyTitle%}
+{% note success%}
+由于各个国家的政策和法规有所不同，所以 Office 365 在全球一共有 4 个版本：全球版，美国政府版，德国版及处于中国的世纪互联运营版。以下内容以`全球版` E5 开发者版本 为基础进行介绍。 1
+{% endnote %}
+{% label primary@中国%}
 
 Office 365 是微软为企业打造的完整的办公云服务，它不仅包含最新版的 Office 软件，同时满足企业对于企业级邮件处理（Exchange Online）、  文件分享（SharePoint Online）、即时消息和可视网络会议（Skype for Business）的需求。Office 365 将帮助您的企业实现办公的运维、管理  和使用体验的革新，为您的企业带来更灵活、高效、更安全可靠的云办公方式。 
 
-<img width=200 src="images/media/15765646706398/15765712301730.jpg" >
-
+<img width=500 src="images/media/15765646706398/15765712301730.jpg" >
 <!-- ![-w1440](images/media/15765646706398/15765712301730.jpg =500x500) -->
 
 Office 365 中包含了很多企业应用产品，其中常见的有 Word，Excel，PowerPoint，Exchange，Skype，SharePoint 等。熟悉微软企业应用体系的用户可以看出来，这其实就是之前企业内部应用微软产品的云端系列，如果熟悉企业信息协同的用户一眼就能看到 SharePoint 这个产品，这是过去二十年微软在企业内部信息协同的拳头产品，如今也可以依托云端运行，APortal 当前版本就是针对 SharePoint Online 进行技术和业务的增强。

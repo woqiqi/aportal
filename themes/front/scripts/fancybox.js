@@ -4,6 +4,8 @@ var rUrl = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:ww
 const cheerio = require('cheerio'); 
 
 const { basename } = require('path');
+const { tocObj } = require('hexo-util');
+
 
 /**
 * Fancybox tag
@@ -54,9 +56,41 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
   if (typeof sidebar === 'undefined') {
     return '';
   }
-  for (const [link, menu] of Object.entries(sidebar)) {
-    result += `<li class="hs-sidebar__item"><a href="${menu}" class="hs-sidebar__link ${menu==path?'active':''}" >${self.__(prefix + link)}</a></li>`;
+  for (const [title, menu] of Object.entries(sidebar)) {
+    result += `<h5 class="hs-sidebar__heading"><a href="#">${self.__(prefix + title)}</a></h5><ul class="hs-sidebar__nav">`;
+    if(menu){
+      for (const [text, link] of Object.entries(menu)) {
+          result += `<li class="hs-sidebar__item"><a href="${link}" class="hs-sidebar__link ${link==path?'active':''}" >${self.__(prefix + text)}</a></li>`;
+      }
+    }
+    result +='</ul>'
   }
-
   return result;
 });
+
+hexo.extend.helper.register('header_doc_sidebar', function(className) {
+  const sidebar = this.site.data.sidebar['docs'];
+  // const path = basename(this.path);
+  let result = '';
+  const self = this;
+  const prefix = 'sidebar.docs.';
+  for (const [title, menu] of Object.entries(sidebar)) {
+    for (const [text, link] of Object.entries(menu)) {
+      if(text=='index'){
+        result += `<li><a class="nav-link u-header__sub-menu-nav-link" href="${self.url_for('docs/'+link)}">${self.__(prefix + title)}</a></li>`;
+      }
+    }
+  }
+  return result;
+});
+
+hexo.extend.helper.register('myToc', function(content) {
+  let data=tocObj(content)
+  result="";
+  data.forEach(e=>{
+    // active
+    result+= `<li class="hd-doc-section-nav-item"><a href="#${e.id}">${e.text}</a></li>`
+  })
+  return result;
+});
+
