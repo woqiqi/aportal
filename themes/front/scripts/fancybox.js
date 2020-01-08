@@ -57,10 +57,13 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
     return '';
   }
   for (const [title, menu] of Object.entries(sidebar)) {
-    result += `<h5 class="hs-sidebar__heading"><a href="#">${self.__(prefix + title)}</a></h5><ul class="hs-sidebar__nav">`;
     if(menu){
       for (const [text, link] of Object.entries(menu)) {
+        if(text=='index'){
+          result += `<h5 class="hs-sidebar__heading"><a href="${link}">${self.__(prefix + title)}</a></h5><ul class="hs-sidebar__nav">`;
+        }else{
           result += `<li class="hs-sidebar__item"><a href="${link}" class="hs-sidebar__link ${link==path?'active':''}" >${self.__(prefix + text)}</a></li>`;
+        }
       }
     }
     result +='</ul>'
