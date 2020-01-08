@@ -1,16 +1,17 @@
 docs:
-  startUsing: 
+  gettingstarted: 
     index: index.html
-    getReady: getReady.html
-    install: install.html
-    initialSetup: initialSetup.html
-  exampleProject: 
-    index: exampleProjectIndex.thml
-  detailedExplanation: 
-    index: detailedExplanation.html
-    organizationalStructureManagement: structureManagement.html
-    processManagement: processManagement.html
-    formDesign: formDesign.html
-    customDevelopment: customDevelopment.html
-  commonProblem: 
-    index: commonProblemIndex.html
+    preinstallation: preinstallation.html
+    installation: installation.html
+    initialization: initialization.html
+  example: 
+    index: index.thml
+  introduction: 
+    index: index.html
+    orgchart: orgchart.html
+    workflow: workflow.html
+    form: form.html
+    development: development.html
+  common: 
+    index: index.html
+    writting: writting.html
