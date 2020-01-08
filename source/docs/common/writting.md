@@ -1,5 +1,6 @@
 ---
-title: 常见问题
+title: 文档书写规范
+date: 2020-01-08 11:25:38
 ---
 ## img tag的写法
 imgtag的tag名为：fullimg或fi
