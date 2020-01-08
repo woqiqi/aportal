@@ -19,14 +19,15 @@ category: Category
 tag: Tag
 sidebar:
   docs:
-    startUsing: 开始使用
-    getReady: 准备
-    install: 安装
-    initialSetup: 初始设置
-    exampleProject: 示例项目
-    detailedExplanation: 使用详解
-    organizationalStructureManagement: 组织机构管理
-    processManagement: 流程管理
-    formDesign: 表单设计
-    customDevelopment: 自定义开发
-    commonProblem: 常见问题
+    gettingstarted: 开始使用
+    preinstallation: 准备
+    installation: 安装
+    initialization: 初始设置
+    example: 示例项目
+    introduction: 使用详解
+    orgchart: 组织结构管理
+    workflow: 流程管理
+    form: 表单设计
+    development: 自定义开发
+    common: 常见问题
+    writting: 文档书写规范
