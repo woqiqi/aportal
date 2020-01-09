@@ -90,9 +90,13 @@ hexo.extend.helper.register('header_doc_sidebar', function(className) {
 hexo.extend.helper.register('myToc', function(content) {
   let data=tocObj(content)
   result="";
-  data.forEach(e=>{
-    // active
-    result+= `<li class="hd-doc-section-nav-item"><a href="#${e.id}">${e.text}</a></li>`
+  data.forEach((e,i)=>{
+    result+= `<li class="hd-doc-section-nav-item">
+      <a href="#${e.id}">${e.text}</a>`
+    if(data[i+1]&&e.level<data[i+1].level){
+      result+=myToc(e,i,data,true)
+    }
+    result+= `</li>`
   })
   return result;
 });
@@ -160,3 +164,31 @@ hexo.extend.helper.register('page_nav', function() {
 
   return result;
 });
+
+
+function myToc(e,i,data,flag2){
+  let flag=true
+  let flag1=false
+  let result='<ul>';
+  while (flag) {
+    if(flag2){
+      el=i+1;
+    }else{
+      el=i;
+    }
+    let a=data[el]
+    if(a&&(a.level>e.level)){
+      flag1=true;
+      result+=`<li class="hd-doc-section-nav-item"><a href="#${a.id}">${a.text}</a>`;
+      data.splice(el,1);
+      if(data[el]&&(data[el].level>a.level)){
+        result+=myToc(a,el,data);
+      }
+      result+='</li>'
+    }else{
+      flag=false;
+    }
+  }
+  result+='</ul>'
+  return flag1?result:''
+}
