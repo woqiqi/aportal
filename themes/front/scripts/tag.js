@@ -8,7 +8,7 @@ function fullImg(args, content) {
     let type=args.join('').split(',')
     let width=type[2]?type[2]:'70%';
     let height=type[3]?type[3]:(type[2]?type[2]:'')
-    return `<div width='100%' class='text-center'><img class='text-center ${type[1]}' height='${height}' width='${width}' src='${type[0]}' ></img></div>`;
+    return `<div width='100%' class='text-center'><img class='pb-4 text-center ${type[1]}' height='${height}' width='${width}' src='${type[0]}' ></img></div>`;
 }
 function postLabel (args) {
   args = args.join(' ').split('@');

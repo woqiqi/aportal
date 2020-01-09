@@ -60,9 +60,9 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
     if(menu){
       for (const [text, link] of Object.entries(menu)) {
         if(text=='index'){
-          result += `<h5 class="hs-sidebar__heading"><a href="${link}">${self.__(prefix + title)}</a></h5><ul class="hs-sidebar__nav">`;
+          result += `<h5 class="hs-sidebar__heading"><a href="${self.url_for('docs/'+title+'/'+link)}">${self.__(prefix + title)}</a></h5><ul class="hs-sidebar__nav">`;
         }else{
-          result += `<li class="hs-sidebar__item"><a href="${link}" class="hs-sidebar__link ${link==path?'active':''}" >${self.__(prefix + text)}</a></li>`;
+          result += `<li class="hs-sidebar__item"><a href="${self.url_for('docs/'+title+'/'+link)}" class="hs-sidebar__link ${link==path?'active':''}" >${self.__(prefix + text)}</a></li>`;
         }
       }
     }
@@ -80,7 +80,7 @@ hexo.extend.helper.register('header_doc_sidebar', function(className) {
   for (const [title, menu] of Object.entries(sidebar)) {
     for (const [text, link] of Object.entries(menu)) {
       if(text=='index'){
-        result += `<li><a class="nav-link u-header__sub-menu-nav-link" href="${self.url_for('docs/'+link)}">${self.__(prefix + title)}</a></li>`;
+        result += `<li><a class="nav-link u-header__sub-menu-nav-link" href="${self.url_for('docs/'+title+'/'+link)}">${self.__(prefix + title)}</a></li>`;
       }
     }
   }
@@ -97,3 +97,66 @@ hexo.extend.helper.register('myToc', function(content) {
   return result;
 });
 
+hexo.extend.helper.register('page_nav', function() {
+  const type = this.page.canonical_path.split('/')[0];
+  const sidebar = this.site.data.sidebar[type];
+  let arr=this.page.canonical_path.split('/')
+  arr.splice(0,1)
+  // const path = basename(this.path);
+  const list = {};
+  const prefix = 'sidebar.' + type + '.';
+
+  for (const i in sidebar) {
+    for (const j in sidebar[i]) {
+      if(j=='index'){
+        list[i+'/'+sidebar[i][j]] = i;
+      }else{
+        list[i+'/'+sidebar[i][j]] = j;
+      }
+    }
+  }
+
+  const keys = Object.keys(list);
+  const index = keys.indexOf(arr.join('/'));
+  let result = '';
+  let len=6
+  if (index > 0) {
+    if(index==keys.length - 1){
+      len=12
+    }else{
+      len=6
+    }
+    result += `  <div class="col-sm-${len}">
+                  <a class="card shadow text-right p-4 transition-3d-hover" href="${this.url_for(type+'/'+keys[index - 1])}">
+                    <span class="media align-items-center">
+                      <span class="fas fa-arrow-left mr-2"></span>
+                      <span class="media-body">
+                        <span class="d-block text-secondary">上一页</span>
+                        <span class="d-block font-weight-semi-bold">${this.__(prefix + list[keys[index - 1]])}</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>`;
+  }
+
+  if (index < keys.length - 1) {
+    if(index==0){
+      len=12
+    }else{
+      len=6
+    }
+    result += `<div class="col-sm-${len}">
+                <a class="card shadow p-4 transition-3d-hover" href="${this.url_for(type+'/'+keys[index + 1])}">
+                  <span class="media align-items-center">
+                    <span class="media-body">
+                      <span class="d-block text-secondary">下一页</span>
+                      <span class="d-block font-weight-semi-bold">${this.__(prefix + list[keys[index + 1]])}</span>
+                    </span>
+                    <span class="fas fa-arrow-right ml-2"></span>
+                  </span>
+                </a>
+              </div>`;
+  }
+
+  return result;
+});

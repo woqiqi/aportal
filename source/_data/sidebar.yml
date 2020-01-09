@@ -5,7 +5,7 @@ docs:
     installation: installation.html
     initialization: initialization.html
   example: 
-    index: index.thml
+    index: index.html
   introduction: 
     index: index.html
     orgchart: orgchart.html
