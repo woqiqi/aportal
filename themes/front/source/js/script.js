@@ -10,7 +10,7 @@
     })
     $.HSCore.components.HSScrollNav.init($('.js-scroll-nav'), {
       duration: 400,
-      customOffsetTop: 0
+      customOffsetTop: -60
     });
   })
 })(jQuery);
