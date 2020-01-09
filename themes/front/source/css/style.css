@@ -18,3 +18,20 @@
 .card-body-span{
     padding-left: 5px;
 }
+
+.highlight {
+    background: #eee;
+    padding: 10px 15px;
+    color: #4d4d4c;
+    overflow: auto;
+}
+
+.docstitle::before {
+    content: "|";
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: -10px;
+    position: absolute;
+    top: 12px;
+}
