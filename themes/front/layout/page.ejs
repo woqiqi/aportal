@@ -2,7 +2,7 @@
    <header id="header" class="u-header u-header--starter">
     <nav id="logoAndNav" class="navbar navbar-dark fixed-top bg-primary flex-nowrap p-0">
       <div class="col-md-3 col-xl-2 bg-md-primary-darker navbar-brand u-header__navbar-brand u-header__navbar-brand-center mr-0 py-2">
-        <a class="u-header__navbar-brand-text-white d-flex" href="index.html" aria-label="Front">
+        <a class="u-header__navbar-brand-text-white d-flex" href="<%= url_for('index.html') %>" aria-label="Front">
           <img class="js-svg-injector"  width="100%" height="48px" src="<%= url_for('images/Aportal(white).svg') %>" alt="Image Description" />
         </a>
         <!-- <a class="small ml-3" href="getting-started/changelog.html"> -->
@@ -61,7 +61,7 @@
       <main class="col-md-9 col-xl-10 px-4 pt-0 pt-md-11 pb-7 ml-md-auto">
         <div class="row">
           <!-- Section Nav -->
-          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+          <div class="col-xl-3 order-xl-2 d-none d-xl-inline-block">
             <ul class="js-scroll-nav hd-doc-section-nav">
               <!-- <li class="hd-doc-section-nav-item active"><a href="#quick-start">Quick start</a></li>
               <li class="hd-doc-section-nav-item"><a href="#starter-template">Starter template</a></li>
@@ -71,7 +71,7 @@
           </div>
           <!-- End Section Nav -->
 
-          <div class="col-xl-10 order-xl-1">
+          <div class="col-xl-9 order-xl-1">
             <div class="hs-docs-content-divider">
               <h1><%= page.title%></h1>
             </div>
