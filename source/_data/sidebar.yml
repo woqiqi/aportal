@@ -1,7 +1,17 @@
 docs:
-  startUsing: index.html
-  basicFunction: setup.html
-  organizationalStructureManagement: configuration.html
-  processManagement: commands.html
-  formDesign: troubleshooting.html
-  customDevelopment: contributing.html
+  gettingstarted: 
+    index: index.html
+    preinstallation: preinstallation.html
+    installation: installation.html
+    initialization: initialization.html
+  example: 
+    index: index.html
+  introduction: 
+    index: index.html
+    orgchart: orgchart.html
+    workflow: workflow.html
+    form: form.html
+    development: development.html
+  common: 
+    index: index.html
+    writting: writting.html

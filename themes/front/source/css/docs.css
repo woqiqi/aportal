@@ -45,7 +45,7 @@ table {
 
 @media (min-width: 768px) {
   .bg-md-primary-darker {
-    background-color: #196eff;
+    background-color: #d83b01;
   }
   .bg-md-dark {
     background-color: #000;
@@ -411,12 +411,12 @@ div.code-toolbar > .toolbar a:hover {
 }
 
 .hs-sidebar__link.active {
-  color: #377dff;
-  border-color: #377dff;
+  color: #ea4300;
+  border-color: #ea4300;
   padding-top: .5rem;
 }
 .hs-sidebar__link.active:hover {
-  color: #377dff;
+  color: #ea4300;
 }
 
 .hs-sidebar__link:hover {
