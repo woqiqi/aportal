@@ -21,8 +21,8 @@
        data-unfold-animation-in="slideInUp"
        data-unfold-animation-out="fadeOut">
        <img class="dropdown-item-icon" src="<%= url_for('images/cn.svg') %>" alt="SVG">
-      <span class="d-inline-block d-sm-none">中文</span>
-      <span class="d-none d-sm-inline-block">中文</span>
+      <span class="d-inline-block d-sm-none"><%= __('lang')%></span>
+      <span class="d-none d-sm-inline-block"><%= __('lang')%></span>
     </a>
 
     <div id="languageDropdown" class="dropdown-menu dropdown-unfold" aria-labelledby="languageDropdownInvoker">
