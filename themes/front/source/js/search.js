@@ -14,15 +14,29 @@ var searchFunc = function(path, search_id, content_id) {
             }).get();
 
             var $input = document.getElementById(search_id);
-            var $resultContent = document.getElementById(content_id);
-
-            $input.addEventListener('input', function(){
+            // var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('blur', function(){
+                $("#local-search-result").fadeTo("slow", 0.01, function(){//fade
+                    $(this).slideUp("slow", function() {//slide up
+                      $(this).remove();//then remove from the DOM
+                    });
+                  });
+                // setTimeout(function(){
+                //     $('#local-search-result').remove();
+                //    },300);
+            })
+            $input.addEventListener('input', fn);
+            $input.addEventListener('click', fn);
+            function fn(){
+                $('#local-search-result').remove();
                 var str='<ul class=\"search-result-list\">';                
                 var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                $resultContent.innerHTML = "";
+                // $resultContent.innerHTML = "";
                 if (this.value.trim().length <= 0) {
                     return;
                 }
+                let link=$('<div id="local-search-result"></div>')
+                link.appendTo("#"+content_id);
                 // perform local searching
                 datas.forEach(function(data) {
                     var isMatch = true;
@@ -86,8 +100,8 @@ var searchFunc = function(path, search_id, content_id) {
                     }
                 });
                 str += "</ul>";
-                $resultContent.innerHTML = str;
-            });
+                link[0].innerHTML = str;
+            }
         }
     });
 }
