@@ -9,9 +9,13 @@ description: ''
 keywords:
 author: John Doe
 language: 
-  - zh-cn
+  - zh-CN
   - en
 timezone: 'Asia/Shanghai'
+search:
+  path: search.xml
+  field: all
+  content: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

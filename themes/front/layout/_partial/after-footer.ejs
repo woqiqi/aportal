@@ -17,10 +17,18 @@
  <%- js('js/js/components/hs.slick-carousel')%>
  <%- js('js/js/components/hs.go-to')%>
  <%- js('js/js/components/hs.scroll-nav')%>
+ <%- js('js/search')%>
  <%- js('js/script')%>
 
  <!-- JS Plugins Init. -->
  <script>
+    var search_path = "<%= config.search.path %>";
+    if (search_path.length == 0) {
+    search_path = "search.xml";
+    }
+    var path = "<%= config.root %>" + search_path;
+    console.log(path);
+    searchFunc(path, 'local-search-input', 'local-search-result');
    $(window).on('load', function () {
       var typed = new Typed(".u-text-animation.u-text-animation--typing", {
         strings: ["简洁!", "高效!", "先进!"],

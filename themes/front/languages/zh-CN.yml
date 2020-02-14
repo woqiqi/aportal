@@ -17,6 +17,7 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+lang: 中文
 sidebar:
   docs:
     gettingstarted: 开始使用
