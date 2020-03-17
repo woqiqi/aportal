@@ -1,5 +1,5 @@
 {
-    "currentVersion": "0.0.3",
+    "currentVersion": "0.0.4",
     "versions": [
         {
             "version": "0.0.1",
@@ -15,6 +15,11 @@
             "version": "0.0.3",
             "date": "2020-2-3",
             "description": "Added Aportal lib."
+        },
+        {
+            "version": "0.0.4",
+            "date": "2020-3-17",
+            "description": "Modified english resources."
         }
     ]
 }
