@@ -1,5 +1,5 @@
 {
-    "currentVersion": "0.0.4",
+    "currentVersion": "0.0.5",
     "versions": [
         {
             "version": "0.0.1",
@@ -20,6 +20,11 @@
             "version": "0.0.4",
             "date": "2020-3-17",
             "description": "Modified english resources."
+        },
+        {
+            "version": "0.0.5",
+            "date": "2020-3-19",
+            "description": "Remove exsiting views."
         }
     ]
 }
