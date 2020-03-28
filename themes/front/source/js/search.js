@@ -15,18 +15,20 @@ var searchFunc = function(path, search_id, content_id) {
 
             var $input = document.getElementById(search_id);
             // var $resultContent = document.getElementById(content_id);
-            $input.addEventListener('blur', function(){
-                $("#local-search-result").fadeTo("slow", 0.01, function(){//fade
-                    $(this).slideUp("slow", function() {//slide up
-                      $(this).remove();//then remove from the DOM
-                    });
-                  });
-                // setTimeout(function(){
-                //     $('#local-search-result').remove();
-                //    },300);
-            })
-            $input.addEventListener('input', fn);
-            $input.addEventListener('click', fn);
+            if($input){
+                $input.addEventListener('blur', function(){
+                    $("#local-search-result").fadeTo("slow", 0.01, function(){//fade
+                        $(this).slideUp("slow", function() {//slide up
+                          $(this).remove();//then remove from the DOM
+                        });
+                      });
+                    // setTimeout(function(){
+                    //     $('#local-search-result').remove();
+                    //    },300);
+                })
+                $input.addEventListener('input', fn);
+                $input.addEventListener('click', fn);
+            }
             function fn(){
                 $('#local-search-result').remove();
                 var str='<ul class=\"search-result-list\">';                
