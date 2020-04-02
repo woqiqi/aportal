@@ -20,6 +20,7 @@ tag: Tag
 lang: 中文
 sidebar:
   docs:
+    about: 关于
     gettingstarted: 开始使用
     preinstallation: 准备
     installation: 安装

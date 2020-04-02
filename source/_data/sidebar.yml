@@ -1,9 +1,11 @@
 docs:
+  about: 
+    index: index.html
   gettingstarted: 
     index: index.html
     preinstallation: preinstallation.html
     installation: installation.html
-    initialization: initialization.html
+    # initialization: initialization.html
   introduction: 
     index: index.html
     orgchart: orgchart.html
@@ -11,8 +13,8 @@ docs:
     form: form.html
     center: center.html
     admin: admin.html  
-  example: 
-      index: index.html
+  # example: 
+  #     index: index.html
   common: 
     index: index.html
     writting: writting.html
