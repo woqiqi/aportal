@@ -806,9 +806,72 @@ date: 2020-01-03 14:28:17
     {%endnote%}
 
 &emsp;&emsp;继承S2WorkflowNodeEvent实现流程自定义代码片段如下图所示：
-{% fullimg images/aportal-2020-03-28-00-57-17.png,  class, 80%,80% %}
+```csharp
+namespace APortal.NodeEvents {
+    public class GetCustomerService : ExternalEvent {
+        public override void Completed (SSWorkflowControl wfc) {
+            Log.WriteLine (String.Format ("节点[id={0},title={1}] Completed GetCustomerService_自定义代码调用成功", wfc.Id, wfc.Title));
+            Web web = wfc.web;
+            List customerOUCList = ListExtensions.GetListByUrl (web, "Lists/APortal_CustomerOUC");
+            SSListItem formDataItem = wfc.SSWorkflow.FormDataItem;
+            int customerID = formDataItem.GetFieldValue<FieldLookupValue> ("CUID").LookupId;
+            int endCustomerID = formDataItem.GetFieldValue<FieldLookupValue> ("EndCustomer").LookupId;
+            int companyCodeID = formDataItem.GetFieldValue<FieldLookupValue> ("CompanyCode").LookupId;
+
+            CamlQuery camlQuery_CustomerOUC = new CamlQuery ();
+            camlQuery_CustomerOUC.ViewXml = CAML.ViewQuery (ViewScope.Recursive,
+                CAML.Where (
+                    CAML.And (
+                        CAML.Eq (CAML.FieldValue ("CompanyCode", "Lookup", companyCodeID.ToString (), "LookupId='true'")),
+                        string.Format ("<In><FieldRef Name=\"WorkflowNode\" LookupId=\"True\" /><Values><Value Type=\"Integer\">{0}</Value><Value Type=\"Integer\">{1}</Value></Values></In>", customerID, endCustomerID)
+                    )), "", CAML.ViewFields (CAML.FieldRef ("ID"), CAML.FieldRef ("Title"), CAML.FieldRef ("CustomerService")), 99);
+
+            ListItemCollection customerOUCListItems = customerOUCList.GetItems (camlQuery_CustomerOUC);
+            web.Context.Load (customerOUCListItems);
+            web.Context.ExecuteQueryRetry (3, 100);
+            string user4Value = "";
+            if (customerOUCListItems.Count > 0) {
+                SSListItem customerOUCListItem = new SSListItem (customerOUCListItems[0]);
+                if (customerOUCListItem["CustomerService"] != null) {
+                    FieldLookupValue[] customerServiceValues = customerOUCListItem.GetFieldValue<FieldLookupValue[]> ("CustomerService");
+                    foreach (var customerServiceValue in customerServiceValues) {
+                        user4Value = string.Format ("{0}{1};#{2};#", user4Value, customerServiceValue.LookupId, customerServiceValue.LookupValue);
+                    }
+                }
+            }
+            formDataItem["User4"] = user4Value;
+            formDataItem.Update (false);
+            Log.WriteLine (String.Format ("GetCustomerService_自定义代码调用结束。"));
+        }
+    }
+}
+```
 &emsp;&emsp;S2WorkflowNodeEvent接口的代码片段如下图所示：
-{% fullimg images/aportal-2020-03-28-00-57-50.png,  class, 80%,80% %}
+```csharp
+namespace APortal.NodeEvents {
+    public class ExternalEvent : ShuiShan.S3.Workflow.ISSWNodeExternalEvent {
+        public virtual void Inited (SSWorkflowControl wfc) {
+            //wfc.Memo = String.Format("{0},{1}:{2}", wfc.Memo, System.DateTime.Now, "S3NodeEventTesting.Inited");
+            //wfc.Update();
+        }
+
+        public virtual void Processed (SSWorkflowControl wfc) {
+            //wfc.Memo = String.Format("{0},{1}:{2}", wfc.Memo, System.DateTime.Now, "S3NodeEventTesting.Processed");
+            //wfc.Update();
+        }
+
+        public virtual void TaskCompleted (SSWorkflowTask task) {
+            //task.SSWorkflowControl.Memo = String.Format("{0},{1}:{2}-{3}", task.SSWorkflowControl.Memo, System.DateTime.Now, "S3NodeEventTesting.TaskCompleted", task.Id);
+            //task.SSWorkflowControl.Update();
+        }
+
+        public virtual void Completed (SSWorkflowControl wfc) {
+            //wfc.Memo = String.Format("{0},{1}:{2}", wfc.Memo, System.DateTime.Now, "S3NodeEventTesting.Completed");
+            //wfc.Update();
+        }
+    }
+}
+```
 &emsp;&emsp;自定义代码部署后，将自定义代码名称写入相应的流程节点的节点处理代码处，包括下列部分：节点处理代码的完整命名空间和类名称，项目名称，版本号，Culture=neutral，PublicKeyTokey，如下图所示：
 {% fullimg images/aportal-2020-03-28-01-01-48.png,  class, 80%,80% %}
 
