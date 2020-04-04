@@ -22,7 +22,7 @@ sidebar:
   docs:
     about: 关于
     gettingstarted: 开始使用
-    preinstallation: 准备
+    preinstallation: 开始之前
     installation: 安装
     initialization: 初始设置
     example: 示例项目
@@ -34,3 +34,4 @@ sidebar:
     admin: 系统管理
     common: 常见问题
     writting: 文档书写规范
+    install365: 新建 SharePint 网站集和网站
