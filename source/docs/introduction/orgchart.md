@@ -26,14 +26,14 @@ date: 2020-01-03 14:28:17
 
 &emsp;&emsp;在组织结构树中点击部门节点时，在右侧列表中显示默认部门从属于该部门的所有用户信息。点击公司节点时，显示公司所有用户信息。
 &emsp;&emsp;在用户列表上方的搜索框中输入用户名、电子邮件、电话号码等信息，可以对用户信息进行检索，检索结果将在用户列表中显示。
-{% fullimg images/aportal-2020-03-27-17-15-59.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-36-06.png,  class, 80%,80% %}
 
 ### 新增/编辑/删除用户
 
 &emsp;&emsp;在人员列表上方点击“新增-新增用户”按钮，开始在系统中创建新用户。
-{% fullimg images/aportal-2020-03-27-17-18-01.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-37-38.png,  class, 80%,80% %}
 &emsp;&emsp;在用户列表中选择某条用户后，点击列表上方的『编辑』按钮，在弹出窗口中对用户信息进行编辑。
-{% fullimg images/aportal-2020-03-27-17-18-36.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-38-20.png,  class, 80%,80% %}
 {% note danger%}
     注1：在整个组织结构中，所有用户的登录名必须唯一，不允许重复；
     注2：人员信息编辑页面显示的字段名称和顺序根据系统人员列表的<ssadmindata>视图决定，系统管理员可以根据实际业务需求在系统后台进行设置
@@ -44,10 +44,10 @@ date: 2020-01-03 14:28:17
 #### 用户信息导入
 
 &emsp;&emsp;组织结构中可以以Excel文件形式批量导入用户。导入用户前，在用户列表上方点击 {% label danger@导入%} 按钮，在弹出窗口中点击 {% label danger@模板下载%} 超链接下载用于用户信息导入的Excel模板。
-{% fullimg images/aportal-2020-03-27-17-20-34.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-38-58.png,  class, 80%,80% %}
 
 &emsp;&emsp;打开下载的Excel模板，在模板中填写需要导入的内容，随后再次点击『导入』按钮，并选择编辑后的Excel文件进行导入。
-{% fullimg images/aportal-2020-03-27-17-22-19.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-39-38.png,  class, 80%,80% %}
 
 {% note danger%}
     注1：Excel导入文件中，必须填写的字段包括“标题 – 用户姓名”，”Login Name – 登录帐号”，“Department – 所属部门”等；其中“Login Name – 登录帐号”不允许重复，如果重复系统将作为同一个用户导入，也就是说以最后一条导入的相同的Login Name的数据作为该用户的用户信息；
@@ -69,15 +69,15 @@ date: 2020-01-03 14:28:17
     注：角色名称在整个系统中应唯一，不允许重复的角色名称。
 {%endnote%}
 &emsp;&emsp;角色列表完成后，可以将角色和部门、用户进行关联。在左侧的组织结构树中选择某个部门节点，在右侧用户列表上方点击 {% label danger@角色%} 按钮，在弹出的“部门角色管理 – 部门名称”窗口中将显示所选择的部门节点上所有已经存在角色和相关用户。
-{% fullimg images/aportal-2020-03-27-17-29-38.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-40-24.png,  class, 80%,80% %}
 &emsp;&emsp;在“部门角色管理”窗口中点击 {% label danger@新建%} 按钮，可以开始为当前部门创建一个新的角色。
-{% fullimg images/aportal-2020-03-27-17-30-20.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-40-47.png,  class, 80%,80% %}
 &emsp;&emsp;在弹出的“部门角色用户管理 – 部门名称 – 新建”窗口右上方的角色名称列表中选择当前需要为该部门创建的角色名，随后点击左侧的 {% label danger@添加用户%} 按钮。
-{% fullimg images/aportal-2020-03-27-17-31-02.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-41-13.png,  class, 80%,80% %}
 &emsp;&emsp;在“用户选择”窗口左侧树中展开选择部门节点，或在上方搜索框中输入用户姓名、邮箱等信息进行检索，然后在右侧出现的部门用户列表中选择需要添加的用户。可以添加1个或多个用户，随后点击 {% label danger@确定%} 按钮保存并返回上一个页面。
-{% fullimg images/aportal-2020-03-27-17-31-45.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-41-37.png,  class, 80%,80% %}
 &emsp;&emsp;在“部门角色用户管理 – 部门名称 – 新建”窗口中将出现在前一个窗口中搜索并选择添加的用户列表。可以选择某个用户并点击 {% label danger@移除用户%} 按钮将该用户从当前角色中删除，或者点击 {% label danger@添加用户%} 用户按钮继续添加其他用户。完成角色用户的添加或删除操作后，可点击 {% label danger@确定%} 按钮保存当前的设置并退回上一窗口。
-{% fullimg images/aportal-2020-03-27-17-32-58.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-42-04.png,  class, 80%,80% %}
 &emsp;&emsp;在“部门角色管理 – 部门名称”窗口中列出了在前一窗口中设置的角色名和设置在该角色下的用户名。用户可以在列表中选择该角色，点击上方的 {% label danger@编辑%} 按钮对角色用户信息进行编辑，或点击 {% label danger@删除%} 按钮将当前选择的角色用户信息删除。
 &emsp;&emsp;点击 {% label danger@确定%} 按钮可关闭当前的“部门角色管理 – 部门名称”窗口。
 {% note danger%}
@@ -89,11 +89,11 @@ date: 2020-01-03 14:28:17
 
 &emsp;&emsp;用户组是对用户信息的另一种组织方式，相对于用户角色来说，用户组可以理解为是一种不关联任何部门节点的角色。每个用户都可以设置属于多个用户组。用户组也可用于工作流节点的审批人设置和授权。
 &emsp;&emsp;在左侧导航上方点击 {% label danger@用户组%}，进入用户组显示和管理界面。左侧导航栏中将显示当前系统中已经创建的所有用户组列表。点击 {% label danger@新建组%} 按钮可创建新的组。
-{% fullimg images/aportal-2020-03-27-19-34-59.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-42-47.png,  class, 50%,50% %}
 &emsp;&emsp;组名称填写完成后点击 {% label danger@确定%} 按钮保存并关闭新建组弹出窗口。选中组后可以点击 {% label danger@编辑%} 按钮对组名称进行修改，或点击 {% label danger@添加用户%} 按钮在当前选中的组中增加用户。
-{% fullimg images/aportal-2020-03-27-19-35-58.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-43-18.png,  class, 80%,80% %}
 &emsp;&emsp;在用户选择窗口中输入关键字搜索用户，或通过左侧树状部门结构查找并选择用户后，点击 {% label danger@确定%} 按钮保存需要添加到用户组的所有用户。
-{% fullimg images/aportal-2020-03-27-19-36-43.png,  class, 80%,80% %}
+{% fullimg images/aportal-2020-03-27-23-43-47.png,  class, 80%,80% %}
 &emsp;&emsp;在用户列表中选择需要移除的用户，点击 {% label danger@移除用户%} 按钮将用户从当前组中移除。
 {% note danger%}
     注：组名称在系统中必须唯一，不允许重复。

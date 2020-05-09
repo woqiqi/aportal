@@ -25,7 +25,7 @@ img Tag 的参数说明：图片路径，类名，宽度，高度。
 {% fullimg images/media/15765646706398/15765712301730.jpg,  class, 80%,80%%}
 
 
-## label Tag
+### label Tag
 
 为文字添加标签背景。
 
@@ -69,7 +69,7 @@ img Tag 的参数说明：图片路径，类名，宽度，高度。
 ```
 {% label body@APortal%}
 
-## note Tag
+### note Tag
 
 内容注释块。
 

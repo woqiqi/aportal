@@ -20,15 +20,18 @@ tag: Tag
 lang: 中文
 sidebar:
   docs:
+    about: 关于
     gettingstarted: 开始使用
-    preinstallation: 准备
+    preinstallation: 开始之前
     installation: 安装
     initialization: 初始设置
     example: 示例项目
     introduction: 使用详解
     orgchart: 组织结构管理
-    workflow: 流程管理
+    workflow: 工作流设计
     form: 表单设计
-    development: 自定义开发
+    center: 工作流中心
+    admin: 系统管理
     common: 常见问题
     writting: 文档书写规范
+    install365: 新建 SharePint 网站集和网站

@@ -70,6 +70,13 @@ Get-Module -Name APortal.PowerShell -ListAvailable
     Set-APortalWeb https://yourtenantname.sharepoint.com/sites/web/subweb
     # 世纪互联网站
     Set-APortalWeb https://yourtenantname.sharepoint.cn/sites/web/subweb
+
+    # 为了提升安装速度，APortal.Powershell 安装资源包国内外分别存放了全量资源包，
+    # 根据当前网络环境用户可以选择安装时使用国内还是海外资源包。
+    # 不使用Globle 参数默认使用国内资源包。
+    # 以下是选择海外资源包的命令：
+    Set-APortalWeb https://yourtenantname.sharepoint.com/sites/web/subweb -Globle $true
+
     ```
 
 2. 在弹出的身份认证窗口中输入网站管理员身份信息
