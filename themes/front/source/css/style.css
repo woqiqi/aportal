@@ -36,3 +36,6 @@
     position: absolute;
     top: 12px;
 }
+.navbar-brand-center{
+    justify-content: center;
+}
