@@ -56,7 +56,7 @@
    <!-- End Jump To -->
 
    <!-- Links -->
-   <div class="d-sm-inline-block ml-sm-auto">
+   <div class="d-sm-inline-block ml-sm-auto text-right">
      <ul class="list-inline mb-0">
       <li class="list-inline-item mr-0">
        
@@ -152,15 +152,9 @@
  <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
    <ul class="navbar-nav u-header__navbar-nav">
      <!-- Home -->
-     <li class="nav-item hs-has-mega-menu u-header__nav-item"
-         data-event="hover"
-         data-animation-in="slideInUp"
-         data-animation-out="fadeOut"
-         data-position="left">
-       <a id="homeMegaMenu" class="nav-link u-header__nav-link" href="javascript:;" aria-haspopup="true" aria-expanded="false">首页</a>
 
-       <!-- Home - Mega Menu -->
-       <!-- End Home - Mega Menu -->
+     <li class="nav-item u-header__nav-item">
+      <a class="nav-link u-header__nav-link" href="<%= url_for('/')%>">首页</a>
      </li>
      <!-- End Home -->
 
@@ -179,46 +173,17 @@
      </li>
      <!-- End Pages -->
 
-     <!-- Blog -->
-     <li class="nav-item hs-has-sub-menu u-header__nav-item"
-         data-event="hover"
-         data-animation-in="slideInUp"
-         data-animation-out="fadeOut">
-       <!-- <a id="blogMegaMenu" class="nav-link u-header__nav-link" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">视频</a> -->
-
-       <!-- Blog - Submenu -->
-      
-       <!-- End Submenu -->
+     <li class="nav-item u-header__nav-item">
+      <a class="nav-link u-header__nav-link" href="https://blog.shuishan-tech.com">博客</a>
      </li>
-     <!-- End Blog -->
 
-     <!-- Shop -->
-     <li class="nav-item hs-has-mega-menu u-header__nav-item"
-         data-event="hover"
-         data-animation-in="slideInUp"
-         data-animation-out="fadeOut"
-         data-max-width="440px"
-         data-position="right">
-       <a id="shopMegaMenu" class="nav-link u-header__nav-link" target="_blank" href="https://blog.shuishan-tech.com" aria-haspopup="true" aria-expanded="false">博客</a>
-
-       <!-- Shop - Mega Menu -->
-       <!-- End Shop - Mega Menu -->
+     <li class="nav-item u-header__nav-item">
+      <a class="nav-link u-header__nav-link" href="https://blog.shuishan-tech.com/tag/case-study/">案例分享</a>
      </li>
-     <!-- End Shop -->
 
-     <!-- Demos -->
-     <li class="nav-item hs-has-mega-menu u-header__nav-item"
-         data-event="hover"
-         data-animation-in="slideInUp"
-         data-animation-out="fadeOut"
-         data-max-width="900px"
-         data-position="right">
-       <a id="demosMegaMenu" class="nav-link u-header__nav-link" href="javascript:;" aria-haspopup="true" aria-expanded="false">关于</a>
-
-       <!-- Demos - Mega Menu -->
-       <!-- End Demos - Mega Menu -->
+     <li class="nav-item u-header__nav-item">
+      <a class="nav-link u-header__nav-link" href="<%= url_for('/about.html')%>">关于</a>
      </li>
-     <!-- End Demos -->
    </ul>
  </div>
  <!-- End Navigation -->
