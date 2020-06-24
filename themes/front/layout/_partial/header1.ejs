@@ -1,5 +1,5 @@
  <!-- ========== HEADER ========== -->
- <header id="header" class="u-header u-header--abs-top-md u-header--bg-transparent u-header--show-hide-md"
+ <header id="header" class="u-header u-header--abs-top-md u-header--show-hide-md"
  data-header-fix-moment="500"
  data-header-fix-effect="slide">
 <div class="u-header__section">
@@ -56,24 +56,16 @@
    <!-- End Jump To -->
 
    <!-- Links -->
-   <div class="d-sm-inline-block ml-sm-auto text-right">
-     <ul class="list-inline mb-0">
+   <div class="d-none d-sm-inline-block ml-sm-auto">
+    <ul class="list-inline mb-0">
       <li class="list-inline-item mr-0">
-       
-       <a class="u-header__navbar-link" href="mailto:aportal@shuishan-tech.net">
-          <i class="fas fa-envelope font-size-1"></i>
-          aportal@shuishan-tech.net
-       </a>
+        <a class="u-header__navbar-link" href="<%= url_for('/faq.html')%>">常见问题</a>
       </li>
       <li class="list-inline-item mr-0">
-       
-       <a class="u-header__navbar-link" href="tel:400-094-0365">
-          <i class="fas fa-phone font-size-1"></i>
-          400-094-0365
-       </a>
+        <a class="u-header__navbar-link" href="<%= url_for('/contacts-agency.html')%>">联系我们</a>
       </li>
-     </ul>
-   </div>
+    </ul>
+  </div>
    <!-- End Links -->
  </div>
 
@@ -154,7 +146,7 @@
      <!-- Home -->
 
      <li class="nav-item u-header__nav-item">
-      <a class="nav-link u-header__nav-link" href="<%= url_for('/index1.html')%>">首页</a>
+      <a class="nav-link u-header__nav-link" href="<%= url_for('/')%>">首页</a>
      </li>
      <!-- End Home -->
 

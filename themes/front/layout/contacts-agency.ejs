@@ -1,0 +1,216 @@
+<%- partial('_partial/header1', null, {cache: !config.relative_link}) %>
+
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll"
+         data-options='{direction: "normal"}'>
+      <!-- Apply your Parallax background image here -->
+      <div class="divimage dzsparallaxer--target" style="height: 120%; background-image: url(images/1920x800/img13.jpg);"></div>
+
+      <!-- Content -->
+      <div class="container position-relative space-2 space-top-md-5 space-bottom-md-3 z-index-2">
+        <div class="w-lg-80 text-center mx-auto">
+          <h1 class="display-3 font-size-md-down-5 text-white font-weight-semi-bold">联系我们</h1>
+          <p class="lead text-white">工作流，业务流程自动化，SharePoint Online和Office 365实施应用</p>
+        </div>
+      </div>
+      <!-- End Content -->
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Contacts Info Section -->
+    <div class="clearfix space-2">
+      <div class="row no-gutters">
+        <div class="col-sm-6 col-lg-3 u-ver-divider u-ver-divider--none-lg">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon8" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="<%= url_for('images/icons/icon-8.svg') %>" alt="SVG"
+                   data-parent="#icon8">
+            </figure>
+            <h2 class="h6 mb-0">地址</h2>
+            <p class="mb-0">上海市浦东新区新金桥路1122号</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+
+        <div class="col-sm-6 col-lg-3 u-ver-divider u-ver-divider--none-lg">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon15" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="<%= url_for('images/icons/icon-15.svg') %>" alt="SVG"
+                   data-parent="#icon15">
+            </figure>
+            <h3 class="h6 mb-0">电子邮箱</h3>
+            <p class="mb-0">aportal@shuishan-tech.net</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+
+        <div class="col-sm-6 col-lg-3 u-ver-divider u-ver-divider--none-lg">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon16" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="<%= url_for('images/icons/icon-16.svg') %>" alt="SVG"
+                   data-parent="#icon16">
+            </figure>
+            <h3 class="h6 mb-0">电话</h3>
+            <p class="mb-0">400-094-0365</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon17" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="<%= url_for('images/icons/icon-17.svg') %>" alt="SVG"
+                   data-parent="#icon17">
+            </figure>
+            <h3 class="h6 mb-0">Fax</h3>
+            <p class="mb-0">+86 (021) 5838-0092</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+      </div>
+    </div>
+    <!-- End Contacts Info Section -->
+
+    <hr class="my-0">
+
+    <!-- Google Map -->
+    <div class="container-fluid space-bottom-1">
+      <div id="container" style="width:100%;;min-height:400px;"></div>
+    </div>
+    <!-- End Google Map -->
+  </main>
+  <!-- ========== END MAIN ========== -->
+<%- partial('_partial/footer1', null, {cache: !config.relative_link}) %>
+
+<script type="text/javascript">
+  //创建和初始化地图函数：
+  function initMap() {
+      createMap(); //创建地图
+      setMapEvent(); //设置地图事件
+      addMapControl(); //向地图添加控件
+      addMarker(); //向地图中添加marker
+  }
+
+  //创建地图函数：
+  function createMap() {
+      var map = new BMap.Map("container"); //在百度地图容器中创建一个地图
+      var point = new BMap.Point(121.618243,31.259722); //定义一个中心点坐标
+      map.centerAndZoom(point, 19); //设定地图的中心点和坐标并将地图显示在地图容器中
+      window.map = map; //将map变量存储在全局
+  }
+
+  //地图事件设置函数：
+  function setMapEvent() {
+      map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+      map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+      map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+      map.enableKeyboard(); //启用键盘上下左右键移动地图
+  }
+
+  //地图控件添加函数：
+  function addMapControl() {
+      //向地图中添加缩放控件
+      var ctrl_nav = new BMap.NavigationControl({
+          anchor: BMAP_ANCHOR_TOP_LEFT,
+          type: BMAP_NAVIGATION_CONTROL_LARGE
+      });
+      map.addControl(ctrl_nav);
+      //向地图中添加缩略图控件
+      var ctrl_ove = new BMap.OverviewMapControl({
+          anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+          isOpen: 1
+      });
+      map.addControl(ctrl_ove);
+      //向地图中添加比例尺控件
+      var ctrl_sca = new BMap.ScaleControl({
+          anchor: BMAP_ANCHOR_BOTTOM_LEFT
+      });
+      map.addControl(ctrl_sca);
+  }
+
+  //标注点数组
+  var markerArr = [{
+      title: "&nbsp;上海水杉网络有限公司&nbsp;",
+      content: "单位地址：xxxxxxx<br/>电话：xxxxxx&nbsp;xxxxx&nbsp;<br/>传真：xxxxxx&nbsp;<br/>电子邮件：xxxxxxxxx",
+      point: "121.618243|31.259722",
+      isOpen: 0,
+      icon: {
+          w: 23,
+          h: 25,
+          l: 0,
+          t: 21,
+          x: 9,
+          lb: 12
+      }
+  }];
+  //创建marker
+  function addMarker() {
+      for (var i = 0; i < markerArr.length; i++) {
+          var json = markerArr[i];
+          var p0 = json.point.split("|")[0];
+          var p1 = json.point.split("|")[1];
+          var point = new BMap.Point(p0, p1);
+          var iconImg = createIcon(json.icon);
+          var marker = new BMap.Marker(point, {
+              icon: iconImg
+          });
+          var iw = createInfoWindow(i);
+          var label = new BMap.Label(json.title, {
+              "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)
+          });
+          marker.setLabel(label);
+          map.addOverlay(marker);
+          label.setStyle({
+              borderColor: "#808080",
+              color: "#333",
+              cursor: "pointer"
+          });
+
+          (function () {
+              var index = i;
+              var _iw = createInfoWindow(i);
+              var _marker = marker;
+              _marker.addEventListener("click", function () {
+                  this.openInfoWindow(_iw);
+              });
+              _iw.addEventListener("open", function () {
+                  _marker.getLabel().hide();
+              })
+              _iw.addEventListener("close", function () {
+                  _marker.getLabel().show();
+              })
+              label.addEventListener("click", function () {
+                  _marker.openInfoWindow(_iw);
+              })
+              if (!!json.isOpen) {
+                  label.hide();
+                  _marker.openInfoWindow(_iw);
+              }
+          })()
+      }
+  }
+  //创建InfoWindow
+  function createInfoWindow(i) {
+      var json = markerArr[i];
+      var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title +
+          "</b><div class='iw_poi_content'>" + json.content + "</div>");
+      return iw;
+  }
+  //创建一个Icon
+  function createIcon(json) {
+      var icon = new BMap.Icon("http://map.baidu.com/image/us_cursor.gif", new BMap.Size(json.w, json.h), {
+          imageOffset: new BMap.Size(-json.l, -json.t),
+          infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+          offset: new BMap.Size(json.x, json.h)
+      })
+      return icon;
+  }
+
+  initMap(); //创建和初始化地图
+</script>
