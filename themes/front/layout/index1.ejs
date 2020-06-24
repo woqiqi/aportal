@@ -1,0 +1,239 @@
+<!-- Search header-->
+<%- partial('_partial/header1', null, {cache: !config.relative_link}) %>
+<!-- End header-->
+<main id="content" role="main">
+
+    <!-- Hero Section -->
+    <div class="position-relative bg-primary overflow-hidden">
+      <div class="container position-relative z-index-2 space-top-3 space-top-md-4 space-bottom-3 space-bottom-md-4">
+        <div class="w-md-80 w-xl-60 text-center mx-md-auto">
+          <div class="mb-7">
+            <h1 class="display-4 text-white mb-4">APortal</h1>
+            <p class="lead text-white mb-4">基于Office 365的云端工作流框架</p>
+          </div>
+          <a class="btn btn-light btn-wide transition-3d-hover" href="#">开始使用</a>
+          <a class="btn text-white" href="#">了解更多<i class="fas fa-angle-right fa-sm ml-1"></i></a>
+        </div>
+      </div>
+    
+      <!-- SVG Shapes -->
+      <figure class="position-absolute top-0 left-0 w-60">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1246 1078">
+          <g opacity=".4">
+            <linearGradient id="doubleEllipseTopLeftID1" gradientUnits="userSpaceOnUse" x1="2073.5078" y1="1.7251" x2="2273.4375" y2="1135.5818" gradientTransform="matrix(-1 0 0 1 2600 0)">
+              <stop class="stop-color-primary-lighter" offset="0.4976" style="stop-color:rgb(247,97,0)"/>
+              <stop class="stop-color-primary" offset="1" style="stop-color:rgb(205,51,1)"/>
+            </linearGradient>
+            <polygon fill="url(#doubleEllipseTopLeftID1)" points="519.8,0.6 0,0.6 0,1078 863.4,1078   "/>
+            <linearGradient id="doubleEllipseTopLeftID2" gradientUnits="userSpaceOnUse" x1="1717.1648" y1="3.779560e-05" x2="1717.1648" y2="644.0417" gradientTransform="matrix(-1 0 0 1 2600 0)">
+              <stop class="stop-color-primary-lighter" offset="1.577052e-06" style="stop-color:rgb(247,97,0)"/>
+              <stop class="stop-color-primary" offset="1" style="stop-color:rgb(205,51,1)"/>
+            </linearGradient>
+            <polygon fill="url(#doubleEllipseTopLeftID2)" points="519.7,0 1039.4,0.6 1246,639.1 725.2,644   "/>
+          </g>
+        </svg>
+      </figure>
+      <figure class="position-absolute right-0 bottom-0 left-0 mb-n1">
+        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+          <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+        </svg>
+      </figure>
+      <!-- End SVG Shapes -->
+    </div>
+    <!-- End Hero Section -->
+    
+    <!-- Features Section -->
+    <div class="container space-2">
+      <!-- Title -->
+      <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+        <h2 class="h1">功能亮点</h2>
+        <p>APortal帮助您快速实现业务流程自动化</p>
+      </div>
+      <!-- End Title -->
+    
+      <div class="row mx-n2">
+        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
+          <!-- Icon Blocks -->
+          <a class="card h-100 transition-3d-hover" href="#">
+            <div class="card-body">
+              <figure class="w-100 max-w-8rem mb-4">
+                <img class="img-fluid" src="<%= url_for('images/icon-9.svg') %>" alt="SVG">
+              </figure>
+              <h4>组织结构</h4>
+              <p class="font-size-1 text-body mb-0">强大而灵活的组织结构管理方式：小至单层部门的小型企业，多至集团公司/分、子公司/多层级部门的大型组织。</p>
+            </div>
+            <div class="card-footer border-0 pt-0">
+              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+            </div>
+          </a>
+          <!-- End Icon Blocks -->
+        </div>
+    
+        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
+          <!-- Icon Blocks -->
+          <a class="card h-100 transition-3d-hover" href="#">
+            <div class="card-body">
+              <figure class="w-100 max-w-8rem mb-4">
+                <img class="img-fluid" src="<%= url_for('images/icon-3.svg') %>" alt="SVG">
+              </figure>
+              <h4>流程设计</h4>
+              <p class="font-size-1 text-body mb-0">多种复杂流程功能：节点跳转，流程追回，前、后加签，临时追加审批人，要求解释，预审，超时提醒，流程自动代理等近百种流程特色功能和操作。</p>
+            </div>
+            <div class="card-footer border-0 pt-0">
+              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+            </div>
+          </a>
+          <!-- End Icon Blocks -->
+        </div>
+    
+        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-sm-0">
+          <!-- Icon Blocks -->
+          <a class="card h-100 transition-3d-hover" href="#">
+            <div class="card-body">
+              <figure class="w-100 max-w-8rem mb-4">
+                <img class="img-fluid" src="<%= url_for('images/icon-5.svg') %>" alt="SVG">
+              </figure>
+              <h4>表单配置</h4>
+              <p class="font-size-1 text-body mb-0">在线表单设计器帮助用户快速配置和生成表单页面。符合HTML5标准和前端布局规则，自动适应屏幕类型。</p>
+              <p class="font-size-1 text-body mb-0">表单数据与OneDrive和SharePoint列表无缝集成。</p>
+            </div>
+            <div class="card-footer border-0 pt-0">
+              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+            </div>
+          </a>
+          <!-- End Icon Blocks -->
+        </div>
+    
+        <div class="col-sm-6 col-lg-3 px-2">
+          <!-- Icon Blocks -->
+          <a class="card h-100 transition-3d-hover" href="#">
+            <div class="card-body">
+              <figure class="w-100 max-w-8rem mb-4">
+                <img class="img-fluid" src="<%= url_for('images/icon-2.svg') %>" alt="SVG">
+              </figure>
+              <h4>工作流中心</h4>
+              <p class="font-size-1 text-body mb-0">在APortal工作流中心，用户可以填写并提交流程，审批、搜索、导出流程数据。</p>
+              <p class="font-size-1 text-body mb-0">通过APortal微信小程序，用户还可以随时随地移动接入工作流中心，对自己的审批任务进行处理，实时跟踪流程状态。</p>
+            </div>
+            <div class="card-footer border-0 pt-0">
+              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+            </div>
+          </a>
+          <!-- End Icon Blocks -->
+        </div>
+      </div>
+    </div>
+    <!-- End Features Section -->
+    
+    
+        <!-- Blog News Section -->
+        <div class="gradient-half-primary-v2">
+          <div class="container space-2 space-md-3 px-lg-7">
+            <!-- Title -->
+            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
+              <span class="btn btn-xs btn-soft-success btn-pill mb-2">News &amp; Blog</span>
+            </div>
+            <!-- End Title -->
+    
+            <!-- News Carousel -->
+            <div class="js-slick-carousel u-slick u-slick--equal-height u-slick--gutters-3"
+                 data-slides-show="3"
+                 data-slides-scroll="1"
+                 data-arrows-classes="d-none d-lg-inline-block u-slick__arrow u-slick__arrow--offset u-slick__arrow-centered--y rounded-circle"
+                 data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-inner u-slick__arrow-inner--left"
+                 data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-inner u-slick__arrow-inner--right"
+                 data-pagi-classes="text-center u-slick__pagination mt-7 mb-0"
+                 data-responsive='[{
+                   "breakpoint": 992,
+                   "settings": {
+                     "slidesToShow": 2
+                   }
+                 }, {
+                   "breakpoint": 768,
+                   "settings": {
+                     "slidesToShow": 1
+                   }
+                 }, {
+                   "breakpoint": 554,
+                   "settings": {
+                     "slidesToShow": 1
+                   }
+                 }]'>
+              <!-- Blog News -->
+              <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="../blog/single-article-classic.html" style="background-image: url(../../assets/img/400x500/img1.jpg);">
+                <article class="align-self-end w-100 text-center p-6">
+                  <h3 class="h4 text-white">How to make trust your competitive advantage</h3>
+                  <div class="mt-4">
+                    <strong class="d-block text-white-70 mb-2">Neyton Burchie</strong>
+                    <div class="u-avatar mx-auto">
+                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img3.jpg') %>" alt="Image Description">
+                    </div>
+                  </div>
+                </article>
+              </a>
+              <!-- End Blog News -->
+    
+              <!-- Blog News -->
+              <div class="js-slide position-relative bg-white shadow-sm transition-3d-hover rounded my-4">
+                <article class="align-self-end w-100 text-center p-6">
+                  <h3 class="h6 font-weight-normal">" How to help your team excel at remote collaboration. Here are tips and tools we use on the content team at InVision to keep our remote collaboration game strong. Trust is both a complex and nuanced topic. Its very nature makes it difficult to tackle through direct effort. "</h3>
+                  <div class="my-4">
+                    <strong class="d-block mb-2">Keith Margaret</strong>
+                    <div class="u-avatar mx-auto">
+                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img2.jpg') %>" alt="Image Description">
+                    </div>
+                  </div>
+                  <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="../blog/single-article-classic.html">Read More</a>
+                </article>
+              </div>
+              <!-- End Blog News -->
+    
+              <!-- Blog News -->
+              <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="../blog/single-article-classic.html" style="background-image: url(../../assets/img/400x500/img2.jpg);">
+                <article class="align-self-end w-100 text-center p-6">
+                  <h3 class="h4 text-white">Remote workers, here's how to dodge distractions</h3>
+                  <div class="mt-4">
+                    <strong class="d-block text-white-70 mb-2">Tina Krueger</strong>
+                    <div class="u-avatar mx-auto">
+                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img1.jpg') %>" alt="Image Description">
+                    </div>
+                  </div>
+                </article>
+              </a>
+              <!-- End Blog News -->
+    
+              <!-- Blog News -->
+              <div class="js-slide position-relative bg-white shadow-sm transition-3d-hover rounded my-4">
+                <article class="align-self-end w-100 text-center p-6">
+                  <h3 class="h6 font-weight-normal">" 4 salary negotiation mistakes you've probably made. Four years ago, I was making $25 per hour as a freelance digital designer building ecommerce sites. I had no idea how to increase my hourly rate, even if I'd wanted to. "</h3>
+                  <div class="my-4">
+                    <strong class="d-block mb-2">Neyton Burchie</strong>
+                    <div class="u-avatar mx-auto">
+                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img3.jpg') %>" alt="Image Description">
+                    </div>
+                  </div>
+                  <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="../blog/single-article-classic.html">Read More</a>
+                </article>
+              </div>
+              <!-- End Blog News -->
+    
+              <!-- Blog News -->
+              <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="../blog/single-article-classic.html" style="background-image: url(../../assets/img/400x500/img3.jpg);">
+                <article class="align-self-end w-100 text-center p-6">
+                  <h3 class="h4 text-white">Steal these ideas to stay happy and productive</h3>
+                  <div class="mt-4">
+                    <strong class="d-block text-white-70 mb-2">Liza Nelson</strong>
+                    <div class="u-avatar mx-auto">
+                      <img class="img-fluid rounded-circle" src="<%= url_for('images//100x100/img4.jpg') %>" alt="Image Description">
+                    </div>
+                  </div>
+                </article>
+              </a>
+              <!-- End Blog News -->
+            </div>
+            <!-- End News Carousel -->
+          </div>
+        </div>
+        <!-- End Blog News Section -->
+      </main>
+<%- partial('_partial/footer1', null, {cache: !config.relative_link}) %>
