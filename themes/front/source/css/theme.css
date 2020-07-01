@@ -19104,8 +19104,21 @@ label.btn {
   margin-left: .5rem;
 }
 .white::after{
-  color:#fff;
+  color:rgba(255,255,255,.7);
 }
+.mian-header:not(.js-header-fix-moment) .d-sm-none{
+  color:rgba(255,255,255,.7);
+}
+.mian-header:not(.js-header-fix-moment) .d-sm-inline-block{
+  color:rgba(255,255,255,.7);
+}
+.mian-header:not(.js-header-fix-moment) .u-header__navbar-link{
+  color:rgba(255,255,255,.7);
+}
+.mian-header:not(.js-header-fix-moment) .u-header__nav-link{
+  color:rgba(255,255,255,.7);
+}
+
 
 .dropdown-toggle-collapse::after {
   transition: 0.3s;
