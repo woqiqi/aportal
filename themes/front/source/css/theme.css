@@ -21380,10 +21380,10 @@ label.btn {
   transition: all 0.4s ease-in;
 }
 
-.svg-preloader *:not(.u-icon):not(.btn):not(.u-media-player):not(.u-media-player__icon):not(.u-label) {
+/* .svg-preloader *:not(.u-icon):not(.btn):not(.u-media-player):not(.u-media-player__icon):not(.u-label) {
   opacity: 0;
   transition: opacity 0.4s ease-in;
-}
+} */
 
 /*------------------------------------
   SVG IE10+ specific styles go here
