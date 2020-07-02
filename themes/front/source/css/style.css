@@ -39,3 +39,13 @@
 .navbar-brand-center{
     justify-content: center;
 }
+.main_header_img{
+    background:url('../images/Aportal.svg');
+	background-size:100% 100%;
+    background-repeat:no-repeat;
+    width:150px ;
+    height:80px;
+}
+.mian-header:not(.js-header-fix-moment) .main_header_img{
+    background-image:url('../images/Aportal\(white\).svg');
+}
