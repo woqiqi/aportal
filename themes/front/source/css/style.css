@@ -49,3 +49,6 @@
 .mian-header:not(.js-header-fix-moment) .main_header_img{
     background-image:url('../images/Aportal\(white\).svg');
 }
+.bg-navy {
+    background-color: #21325b!important;
+}
