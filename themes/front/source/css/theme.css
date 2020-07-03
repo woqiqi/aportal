@@ -21373,12 +21373,12 @@ label.btn {
 /*------------------------------------
   SVG
 ------------------------------------*/
-.svg-preloader {
+/* .svg-preloader {
   z-index: -1;
-  background: transparent url(../svg/preloaders/circle-preloader.svg) center no-repeat !important;
+  background: transparent url(../images/preloaders/circle-preloader.svg) center no-repeat !important;
   overflow: hidden;
   transition: all 0.4s ease-in;
-}
+} */
 
 /* .svg-preloader *:not(.u-icon):not(.btn):not(.u-media-player):not(.u-media-player__icon):not(.u-label) {
   opacity: 0;
