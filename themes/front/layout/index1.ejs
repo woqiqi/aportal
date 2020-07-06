@@ -1,243 +1,349 @@
 <!-- Search header-->
-<%- partial('_partial/mainHeader', null, {cache: !config.relative_link}) %>
+<%- partial('_partial/header', null, {cache: !config.relative_link}) %>
 <!-- End header-->
-<main id="content" role="main">
-
-    <!-- Hero Section -->
-   <!-- Hero Section -->
-   <div id="SVGheroComponents" class="svg-preloader bg-primary position-relative overflow-hidden">
-    <!-- Content -->
-    <div class="container position-relative space-3 space-top-md-5 space-lg-4 z-index-2">
-      <div class="w-md-80 w-xl-60 text-center mx-md-auto">
-        <div class="mb-7">
-          <h1 class="display-4 text-white mb-4">APortal</h1>
-          <p class="lead text-white mb-4">基于Office 365的云端工作流框架</p>
-        </div>
-        <a class="btn btn-light btn-wide transition-3d-hover" href="<%= url_for('docs/gettingstarted')%>">开始使用</a>
-        <a class="btn text-white" href="#miao1">了解更多<i class="fas fa-angle-right fa-sm ml-1"></i></a>
+<!-- Search Content -->
+<div id="searchSlideDown" class="dropdown-unfold u-search-slide-down" aria-labelledby="searchSlideDownInvoker">
+  <form>
+    <!-- Input Group -->
+    <div class="input-group input-group-borderless u-search-slide-down__input rounded mb-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <span class="fas fa-search"></span>
+        </span>
       </div>
-      <!-- End Subscribe Form -->
-    </div>
-    <!-- End Content -->
-
-    <!-- SVG Top Left Shapes -->
-    <figure class="position-absolute top-0 left-0 w-60 ie-double-ellipse-top-left">
-      <img class="js-svg-injector" src="<%= url_for('images/double-ellipse-top-left.svg') %>" alt="Image Description"
-           data-parent="#SVGheroComponents">
-    </figure>
-    <!-- End SVG Top Left Shapes -->
-
-    <!-- SVG Bottom Right Shapes -->
-    <figure class="position-absolute right-0 bottom-0 w-15 ie-double-ellipse-bottom-right">
-      <img class="js-svg-injector" src="<%= url_for('images/double-ellipse-bottom-right.svg') %>" alt="Image Description"
-           data-parent="#SVGheroComponents">
-    </figure>
-    <!-- End SVG Bottom Right Shapes -->
-    <!-- SVG Bottom Shape -->
-    <figure class="position-absolute right-0 bottom-0 left-0" style="bottom:-1px">
-      <img class="js-svg-injector" src="<%= url_for('images/curved-1.svg') %>" alt="Image Description"
-           data-parent="#SVGheroComponents">
-    </figure>
-    <!-- End SVG Bottom Shape -->
-  </div>
-  <!-- End Hero Section -->
-    <!-- End Hero Section -->
-    
-    <!-- Features Section -->
-    <div class="container space-2" id="miao1">
-      <!-- Title -->
-      <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-        <!-- <h2 class="h1">功能亮点</h2> -->
-        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-2">
-          <span class="btn btn-xs btn-soft-success btn-pill mb-2">功能亮点</span>
-        </div>
-        <p>APortal帮助您快速实现业务流程自动化</p>
-      </div>
-      <!-- End Title -->
-    
-      <div class="row mx-n2">
-        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-9.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">组织结构</h4>
-              <p class="font-size-1 text-body mb-0">强大而灵活的组织结构管理方式：小至单层部门的小型企业，多至集团公司/分、子公司/多层级部门的大型组织。</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
-        </div>
-    
-        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-3.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">流程设计</h4>
-              <p class="font-size-1 text-body mb-0">多种复杂流程功能：节点跳转，流程追回，前、后加签，临时追加审批人，要求解释，预审，超时提醒，流程自动代理等近百种流程特色功能和操作。</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
-        </div>
-    
-        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-sm-0">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-5.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">表单配置</h4>
-              <p class="font-size-1 text-body mb-0">在线表单设计器帮助用户快速配置和生成表单页面。符合HTML5标准和前端布局规则，自动适应屏幕类型。</p>
-              <p class="font-size-1 text-body mb-0">表单数据与OneDrive和SharePoint列表无缝集成。</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
-        </div>
-    
-        <div class="col-sm-6 col-lg-3 px-2">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-2.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">工作流中心</h4>
-              <p class="font-size-1 text-body mb-0">在APortal工作流中心，用户可以填写并提交流程，审批、搜索、导出流程数据。</p>
-              <p class="font-size-1 text-body mb-0">通过APortal微信小程序，用户还可以随时随地移动接入工作流中心，对自己的审批任务进行处理，实时跟踪流程状态。</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
-        </div>
+      <input type="search" class="form-control" placeholder="Search Front" aria-label="Search Front">
+      <div class="input-group-append">
+        <a class="input-group-text" href="javascript:;"
+           aria-label="close"
+           data-unfold-event="click"
+           data-unfold-hide-on-scroll="false"
+           data-unfold-target="#searchSlideDown"
+           data-unfold-type="css-animation"
+           data-unfold-animation-in="active"
+           data-unfold-animation-out="fadeOutUp"
+           data-unfold-delay="0"
+           data-unfold-duration="800"
+           data-unfold-overlay='{
+            "className": "u-search-slide-down-bg-overlay",
+            "background": "rgba(55, 125, 255, .1)",
+            "animationSpeed": 400
+           }'>
+          <span class="fas fa-times" aria-hidden="true"></span>
+        </a>
       </div>
     </div>
-    <!-- End Features Section -->
-    
-    
-        <!-- Blog News Section -->
-        <div class="gradient-half-primary-v2">
-          <div class="container space-2 space-md-3 px-lg-7">
-            <!-- Title -->
-            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
-              <span class="btn btn-xs btn-soft-success btn-pill mb-2">新闻 &amp; 博客</span>
-            </div>
-            <!-- End Title -->
-    
-            <!-- News Carousel -->
-            <div class="js-slick-carousel u-slick u-slick--equal-height u-slick--gutters-3"
-                 data-slides-show="3"
-                 data-slides-scroll="1"
-                 data-arrows-classes="d-none d-lg-inline-block u-slick__arrow u-slick__arrow--offset u-slick__arrow-centered--y rounded-circle"
-                 data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-inner u-slick__arrow-inner--left"
-                 data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-inner u-slick__arrow-inner--right"
-                 data-pagi-classes="text-center u-slick__pagination mt-7 mb-0"
-                 data-responsive='[{
-                   "breakpoint": 992,
-                   "settings": {
-                     "slidesToShow": 2
-                   }
-                 }, {
-                   "breakpoint": 768,
-                   "settings": {
-                     "slidesToShow": 1
-                   }
-                 }, {
-                   "breakpoint": 554,
-                   "settings": {
-                     "slidesToShow": 1
-                   }
-                 }]'>
-              <!-- Blog News -->
-              <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="../blog/single-article-classic.html" style="background-image: url(../../assets/img/400x500/img1.jpg);">
-                <article class="align-self-end w-100 text-center p-6">
-                  <h3 class="h4 text-white">How to make trust your competitive advantage</h3>
-                  <div class="mt-4">
-                    <strong class="d-block text-white-70 mb-2">Neyton Burchie</strong>
-                    <div class="u-avatar mx-auto">
-                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img3.jpg') %>" alt="Image Description">
-                    </div>
-                  </div>
-                </article>
-              </a>
-              <!-- End Blog News -->
-    
-              <!-- Blog News -->
-              <div class="js-slide position-relative bg-white shadow-sm transition-3d-hover rounded my-4">
-                <article class="align-self-end w-100 text-center p-6">
-                  <h3 class="h6 font-weight-normal">" How to help your team excel at remote collaboration. Here are tips and tools we use on the content team at InVision to keep our remote collaboration game strong. Trust is both a complex and nuanced topic. Its very nature makes it difficult to tackle through direct effort. "</h3>
-                  <div class="my-4">
-                    <strong class="d-block mb-2">Keith Margaret</strong>
-                    <div class="u-avatar mx-auto">
-                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img2.jpg') %>" alt="Image Description">
-                    </div>
-                  </div>
-                  <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="../blog/single-article-classic.html">Read More</a>
-                </article>
-              </div>
-              <!-- End Blog News -->
-    
-              <!-- Blog News -->
-              <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="../blog/single-article-classic.html" style="background-image: url(../../assets/img/400x500/img2.jpg);">
-                <article class="align-self-end w-100 text-center p-6">
-                  <h3 class="h4 text-white">Remote workers, here's how to dodge distractions</h3>
-                  <div class="mt-4">
-                    <strong class="d-block text-white-70 mb-2">Tina Krueger</strong>
-                    <div class="u-avatar mx-auto">
-                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img1.jpg') %>" alt="Image Description">
-                    </div>
-                  </div>
-                </article>
-              </a>
-              <!-- End Blog News -->
-    
-              <!-- Blog News -->
-              <div class="js-slide position-relative bg-white shadow-sm transition-3d-hover rounded my-4">
-                <article class="align-self-end w-100 text-center p-6">
-                  <h3 class="h6 font-weight-normal">" 4 salary negotiation mistakes you've probably made. Four years ago, I was making $25 per hour as a freelance digital designer building ecommerce sites. I had no idea how to increase my hourly rate, even if I'd wanted to. "</h3>
-                  <div class="my-4">
-                    <strong class="d-block mb-2">Neyton Burchie</strong>
-                    <div class="u-avatar mx-auto">
-                      <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img3.jpg') %>" alt="Image Description">
-                    </div>
-                  </div>
-                  <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="../blog/single-article-classic.html">Read More</a>
-                </article>
-              </div>
-              <!-- End Blog News -->
-    
-              <!-- Blog News -->
-              <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="../blog/single-article-classic.html" style="background-image: url(../../assets/img/400x500/img3.jpg);">
-                <article class="align-self-end w-100 text-center p-6">
-                  <h3 class="h4 text-white">Steal these ideas to stay happy and productive</h3>
-                  <div class="mt-4">
-                    <strong class="d-block text-white-70 mb-2">Liza Nelson</strong>
-                    <div class="u-avatar mx-auto">
-                      <img class="img-fluid rounded-circle" src="<%= url_for('images//100x100/img4.jpg') %>" alt="Image Description">
-                    </div>
-                  </div>
-                </article>
-              </a>
-              <!-- End Blog News -->
-            </div>
-            <!-- End News Carousel -->
+    <!-- End Input Group -->
+
+    <!-- Suggestions Content -->
+    <div class="rounded bg-white u-search-slide-down__suggestions py-3 px-5">
+      <ul class="list-group list-group-flush list-group-borderless mb-0">
+        <li><a class="list-group-item list-group-item-action" href="../pages/about-agency.html">About Front</a></li>
+        <li><a class="list-group-item list-group-item-action" href="../../starter/index.html">Getting Started</a></li>
+        <li><a class="list-group-item list-group-item-action" href="../../documentation/index.html">Documentation</a></li>
+      </ul>
+    </div>
+    <!-- End Suggestions Content -->
+  </form>
+</div>
+<!-- End Search Content -->
+<%- partial('_partial/archive', null, {cache: !config.relative_link}) %>
+ <!-- Go to Top -->
+ <a class="js-go-to u-go-to" href="#"
+ data-position='{"bottom": 15, "right": 15 }'
+ data-type="fixed"
+ data-offset-top="400"
+ data-compensation="#header"
+ data-show-effect="slideInUp"
+ data-hide-effect="slideOutDown">
+ <span class="fas fa-arrow-up u-go-to__inner"></span>
+</a>
+<!-- End Go to Top -->
+<!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Account Sidebar Navigation -->
+  <aside id="sidebarContent" class="u-sidebar" aria-labelledby="sidebarNavToggler">
+    <div class="u-sidebar__scroller">
+      <div class="u-sidebar__container">
+        <div class="u-header-sidebar__footer-offset">
+          <!-- Toggle Button -->
+          <div class="d-flex align-items-center pt-4 px-7">
+            <button type="button" class="close ml-auto"
+                    aria-controls="sidebarContent"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    data-unfold-event="click"
+                    data-unfold-hide-on-scroll="false"
+                    data-unfold-target="#sidebarContent"
+                    data-unfold-type="css-animation"
+                    data-unfold-animation-in="fadeInRight"
+                    data-unfold-animation-out="fadeOutRight"
+                    data-unfold-duration="500">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
+          <!-- End Toggle Button -->
+
+          <!-- Content -->
+          <div class="js-scrollbar u-sidebar__body">
+            <div class="u-sidebar__content u-header-sidebar__content">
+              <form class="js-validate">
+                <!-- Login -->
+                <div id="login" data-target-group="idForm">
+                  <!-- Title -->
+                  <header class="text-center mb-7">
+                    <h2 class="h4 mb-0">Welcome Back!</h2>
+                    <p>Login to manage your account.</p>
+                  </header>
+                  <!-- End Title -->
+
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <div class="js-form-message js-focus-state">
+                      <label class="sr-only" for="signinEmail">Email</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="signinEmailLabel">
+                            <span class="fas fa-user"></span>
+                          </span>
+                        </div>
+                        <input type="email" class="form-control" name="email" id="signinEmail" placeholder="Email" aria-label="Email" aria-describedby="signinEmailLabel" required
+                               data-msg="Please enter a valid email address."
+                               data-error-class="u-has-error"
+                               data-success-class="u-has-success">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <div class="js-form-message js-focus-state">
+                      <label class="sr-only" for="signinPassword">Password</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="signinPasswordLabel">
+                            <span class="fas fa-lock"></span>
+                          </span>
+                        </div>
+                        <input type="password" class="form-control" name="password" id="signinPassword" placeholder="Password" aria-label="Password" aria-describedby="signinPasswordLabel" required
+                               data-msg="Your password is invalid. Please try again."
+                               data-error-class="u-has-error"
+                               data-success-class="u-has-success">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+
+                  <div class="d-flex justify-content-end mb-4">
+                    <a class="js-animation-link small link-muted" href="javascript:;"
+                       data-target="#forgotPassword"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Forgot Password?</a>
+                  </div>
+
+                  <div class="mb-2">
+                    <button type="submit" class="btn btn-block btn-sm btn-primary transition-3d-hover">Login</button>
+                  </div>
+
+                  <div class="text-center mb-4">
+                    <span class="small text-muted">Do not have an account?</span>
+                    <a class="js-animation-link small" href="javascript:;"
+                       data-target="#signup"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Signup
+                    </a>
+                  </div>
+
+                  <div class="text-center">
+                    <span class="u-divider u-divider--xs u-divider--text mb-4">OR</span>
+                  </div>
+
+                  <!-- Login Buttons -->
+                  <div class="d-flex">
+                    <a class="btn btn-block btn-sm btn-soft-facebook transition-3d-hover mr-1" href="#">
+                      <span class="fab fa-facebook-square mr-1"></span>
+                      Facebook
+                    </a>
+                    <a class="btn btn-block btn-sm btn-soft-google transition-3d-hover ml-1 mt-0" href="#">
+                      <span class="fab fa-google mr-1"></span>
+                      Google
+                    </a>
+                  </div>
+                  <!-- End Login Buttons -->
+                </div>
+
+                <!-- Signup -->
+                <div id="signup" style="display: none; opacity: 0;" data-target-group="idForm">
+                  <!-- Title -->
+                  <header class="text-center mb-7">
+                    <h2 class="h4 mb-0">Welcome to Front.</h2>
+                    <p>Fill out the form to get started.</p>
+                  </header>
+                  <!-- End Title -->
+
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <div class="js-form-message js-focus-state">
+                      <label class="sr-only" for="signupEmail">Email</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="signupEmailLabel">
+                            <span class="fas fa-user"></span>
+                          </span>
+                        </div>
+                        <input type="email" class="form-control" name="email" id="signupEmail" placeholder="Email" aria-label="Email" aria-describedby="signupEmailLabel" required
+                               data-msg="Please enter a valid email address."
+                               data-error-class="u-has-error"
+                               data-success-class="u-has-success">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <div class="js-form-message js-focus-state">
+                      <label class="sr-only" for="signupPassword">Password</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="signupPasswordLabel">
+                            <span class="fas fa-lock"></span>
+                          </span>
+                        </div>
+                        <input type="password" class="form-control" name="password" id="signupPassword" placeholder="Password" aria-label="Password" aria-describedby="signupPasswordLabel" required
+                               data-msg="Your password is invalid. Please try again."
+                               data-error-class="u-has-error"
+                               data-success-class="u-has-success">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <div class="js-form-message js-focus-state">
+                      <label class="sr-only" for="signupConfirmPassword">Confirm Password</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="signupConfirmPasswordLabel">
+                            <span class="fas fa-key"></span>
+                          </span>
+                        </div>
+                        <input type="password" class="form-control" name="confirmPassword" id="signupConfirmPassword" placeholder="Confirm Password" aria-label="Confirm Password" aria-describedby="signupConfirmPasswordLabel" required
+                               data-msg="Password does not match the confirm password."
+                               data-error-class="u-has-error"
+                               data-success-class="u-has-success">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <div class="mb-2">
+                    <button type="submit" class="btn btn-block btn-sm btn-primary transition-3d-hover">Get Started</button>
+                  </div>
+
+                  <div class="text-center mb-4">
+                    <span class="small text-muted">Already have an account?</span>
+                    <a class="js-animation-link small" href="javascript:;"
+                       data-target="#login"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Login
+                    </a>
+                  </div>
+
+                  <div class="text-center">
+                    <span class="u-divider u-divider--xs u-divider--text mb-4">OR</span>
+                  </div>
+
+                  <!-- Login Buttons -->
+                  <div class="d-flex">
+                    <a class="btn btn-block btn-sm btn-soft-facebook transition-3d-hover mr-1" href="#">
+                      <span class="fab fa-facebook-square mr-1"></span>
+                      Facebook
+                    </a>
+                    <a class="btn btn-block btn-sm btn-soft-google transition-3d-hover ml-1 mt-0" href="#">
+                      <span class="fab fa-google mr-1"></span>
+                      Google
+                    </a>
+                  </div>
+                  <!-- End Login Buttons -->
+                </div>
+                <!-- End Signup -->
+
+                <!-- Forgot Password -->
+                <div id="forgotPassword" style="display: none; opacity: 0;" data-target-group="idForm">
+                  <!-- Title -->
+                  <header class="text-center mb-7">
+                    <h2 class="h4 mb-0">Recover Password.</h2>
+                    <p>Enter your email address and an email with instructions will be sent to you.</p>
+                  </header>
+                  <!-- End Title -->
+
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <div class="js-form-message js-focus-state">
+                      <label class="sr-only" for="recoverEmail">Your email</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="recoverEmailLabel">
+                            <span class="fas fa-user"></span>
+                          </span>
+                        </div>
+                        <input type="email" class="form-control" name="email" id="recoverEmail" placeholder="Your email" aria-label="Your email" aria-describedby="recoverEmailLabel" required
+                               data-msg="Please enter a valid email address."
+                               data-error-class="u-has-error"
+                               data-success-class="u-has-success">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+
+                  <div class="mb-2">
+                    <button type="submit" class="btn btn-block btn-sm btn-primary transition-3d-hover">Recover Password</button>
+                  </div>
+
+                  <div class="text-center mb-4">
+                    <span class="small text-muted">Remember your password?</span>
+                    <a class="js-animation-link small" href="javascript:;"
+                       data-target="#login"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Login
+                    </a>
+                  </div>
+                </div>
+                <!-- End Forgot Password -->
+              </form>
+            </div>
+          </div>
+          <!-- End Content -->
         </div>
-        <!-- End Blog News Section -->
-      </main>
-<%- partial('_partial/footer1', null, {cache: !config.relative_link}) %>
+
+        <!-- Footer -->
+        <footer id="SVGwaveWithDots" class="svg-preloader u-sidebar__footer u-sidebar__footer--account">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item pr-3">
+              <a class="u-sidebar__footer--account__text" href="../pages/privacy.html">Privacy</a>
+            </li>
+            <li class="list-inline-item pr-3">
+              <a class="u-sidebar__footer--account__text" href="../pages/terms.html">Terms</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="u-sidebar__footer--account__text" href="../pages/help.html">
+                <i class="fas fa-info-circle"></i>
+              </a>
+            </li>
+          </ul>
+
+          <!-- SVG Background Shape -->
+          <div class="position-absolute right-0 bottom-0 left-0">
+            <img class="js-svg-injector" src="../../assets/svg/components/wave-bottom-with-dots.svg" alt="Image Description"
+                   data-parent="#SVGwaveWithDots">
+          </div>
+          <!-- End SVG Background Shape -->
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </div>
+  </aside>
+  <!-- End Account Sidebar Navigation -->
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

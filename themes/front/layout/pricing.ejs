@@ -114,10 +114,87 @@
 
 
       </div>
-
+      <!-- Divider -->
+      <div class="w-80 mx-auto">
+        <hr class="my-0">
+      </div>
+      <!-- End Divider -->
     </div>
     <!-- End Counters -->
+ <!-- Testimonials -->
+ <div class="container space-2 space-md-3">
+  <!-- SVG Quote -->
+  <figure class="text-center mb-5">
+    <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
+      height="40px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+      <path class="fill-primary" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
+        C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3
+        c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8
+        C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z" />
+    </svg>
+  </figure>
+  <!-- End SVG Quote -->
 
+  <!-- Testimonials Carousel Main -->
+  <div id="testimonialsNavMain" class="js-slick-carousel u-slick mb-4" data-infinite="true" data-autoplay="true"
+    data-speed="5000" data-fade="true" data-nav-for="#testimonialsNavPagination">
+    <div class="js-slide">
+      <!-- Testimonials -->
+      <div class="w-md-80 w-lg-60 text-center mx-auto">
+        <blockquote class="mb-5">水杉基于Office 365平台构建的工作流和协同办公系统提供的一站式服务，能够很好地满足我们作为一个独立的小型业务单元在日常工作中所需的绝大部分办公流程、工作沟通和业务数据记录汇总功能。
+        </blockquote>
+        <h4 class="h6 text-muted">跨国企业中国区采购办公室，总经理，Peter</h4>
+      </div>
+      <!-- End Testimonials -->
+    </div>
+
+    <div class="js-slide">
+      <!-- Testimonials -->
+      <div class="w-md-80 w-lg-60 text-center mx-auto">
+        <blockquote class="mb-5">连锁百货行业内部业务流程种类繁杂，跨部门、跨区域、跨组织结构层级的情况非常普遍。水杉公司在SharePoint平台上搭建了BPM系统，并实施了上百个业务流程，完美应对了我们在内部业务流程管控方面的需求。水杉项目团队在日常服务过程中表现出的耐心、细致和专业化程度，给我们留下很深的印象。
+        </blockquote>
+        <h4 class="h6 text-muted">连锁百货行业领军企业，IT总经理，Mark</h4>
+      </div>
+      <!-- End Testimonials -->
+    </div>
+
+    <div class="js-slide">
+      <!-- Testimonials -->
+      <div class="w-md-80 w-lg-60 text-center mx-auto">
+        <blockquote class="mb-5">中国国有企业，在全球化扩张和建设的进程中面临了市场拓展、业务增长、不同地区文化协同等新的挑战，信息技术系统在这个过程中是一个有效帮助企业实现战略目标的工具。选择合适的技术手段，采用专业的合作伙伴是建设有效信息系统的必要手段。在全球Intranet的建设过程中，我们寻找到了优秀的合作伙伴，通过双方的协同工作建设了一个可以高效集成不同办公和业务系统的平台。</blockquote>
+        <h4 class="h6 text-muted">汽车空调行业领先企业，全球IT负责人，Erwin</h4>
+      </div>
+      <!-- End Testimonials -->
+    </div>
+  </div>
+  <!-- End Testimonials Carousel Main -->
+
+  <!-- Testimonials Carousel Pagination -->
+  <div id="testimonialsNavPagination"
+    class="js-slick-carousel u-slick u-slick--pagination-modern u-slick--transform-off mx-auto" data-infinite="true"
+    data-autoplay="true" data-speed="5000" data-focus-on-select="true" data-center-mode="true" data-slides-show="3"
+    data-is-thumbs="true" data-nav-for="#testimonialsNavMain">
+    <div class="js-slide">
+      <div class="u-avatar mx-auto">
+        <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img3.jpg') %>" alt="Image Description">
+      </div>
+    </div>
+
+    <div class="js-slide">
+      <div class="u-avatar mx-auto">
+        <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img2.jpg') %>" alt="Image Description">
+      </div>
+    </div>
+
+    <div class="js-slide">
+      <div class="u-avatar mx-auto">
+        <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img1.jpg') %>" alt="Image Description">
+      </div>
+    </div>
+  </div>
+  <!-- End Testimonials Carousel Pagination -->
+</div>
+<!-- End Testimonials -->
   </main>
   <!-- ========== END MAIN ========== -->
 <%- partial('_partial/footer1', null, {cache: !config.relative_link}) %>
