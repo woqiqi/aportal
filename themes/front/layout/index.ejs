@@ -7,7 +7,7 @@
    <!-- Hero Section -->
    <div id="SVGheroComponents" class="svg-preloader bg-primary position-relative overflow-hidden">
     <!-- Content -->
-    <div class="container position-relative space-3 space-top-md-5 space-lg-4 z-index-2">
+    <div class="container position-relative space-3 space-top-md-5 space-lg-3 z-index-2">
       <div class="w-md-80 w-xl-60 text-center mx-md-auto">
         <div class="mb-7">
           <h1 class="display-4 text-white mb-4">APortal</h1>
@@ -16,7 +16,38 @@
         <a class="btn btn-light btn-wide transition-3d-hover" href="<%= url_for('docs/gettingstarted')%>">开始使用</a>
         <a class="btn text-white" href="#miao1">了解更多<i class="fas fa-angle-right fa-sm ml-1"></i></a>
       </div>
-      <!-- End Subscribe Form -->
+      <!-- Stats Section -->
+      <div class="container space-top-0 space-top-2 space-top-lg-2">
+        <div class="row justify-content-lg-center" >
+          <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
+            <!-- Stats -->
+            <div class="text-center">
+              <span class="d-block h2 font-weight-semi-bold text-white mb-0">10年+</span>
+              <span class="text-white">行业经验</span>
+            </div>
+            <!-- End Stats -->
+          </div>
+
+          <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
+            <!-- Stats -->
+            <div class="text-center">
+              <span class="d-block h2 font-weight-semi-bold text-white mb-0">50,000+</span>
+              <span class="text-white">最终用户</span>
+            </div>
+            <!-- End Stats -->
+          </div>
+
+          <div class="col-sm-4 col-lg-3">
+            <!-- Stats -->
+            <div class="text-center">
+              <span class="d-block h2 font-weight-semi-bold text-white mb-0">123,456,789</span>
+              <span class="text-white">已发起的流程数量</span>
+            </div>
+            <!-- End Stats -->
+          </div>
+        </div>
+      </div>
+      <!-- End Stats Section -->
     </div>
     <!-- End Content -->
 
@@ -34,7 +65,7 @@
     </figure>
     <!-- End SVG Bottom Right Shapes -->
     <!-- SVG Bottom Shape -->
-    <figure class="position-absolute right-0 bottom-0 left-0" style="bottom:-1px">
+    <figure class="position-absolute right-0 bottom-n1 left-0" >
       <img class="js-svg-injector" src="<%= url_for('images/curved-1.svg') %>" alt="Image Description"
            data-parent="#SVGheroComponents">
     </figure>
@@ -128,6 +159,69 @@
       </div>
     </div>
     <!-- End Features Section -->
+    <div class="container">
+      <div class="space-2 space-lg-2">
+        <!-- Title -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <!-- <h2 class="h1">功能亮点</h2> -->
+          <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-2">
+            <span class="btn btn-xs btn-soft-success btn-pill mb-2">安装和使用</span>
+          </div>
+          <p>APortal 管理工具为 Office 365 赋予丰富的 APortal 能力</p>
+        </div>
+        <!-- End Title -->
+        <div class="row align-items-lg-center">
+  
+          <div class="col-lg-5 order-lg-1">
+            <!-- <div class="mb-5">
+              <p>使用 PowerShell 包管理工具安装 APortal 管理工具，使用 APortal 管理工具为您的Office 365 网站赋予丰富的 APortal 能力。</p>
+            </div> -->
+  
+            <!-- List -->
+            <div class="row mb-4">
+              <div class="col-6">
+                <div class="media align-items-center text-secondary mb-3">
+                  <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon" width="16" height="16">
+                  <div class="media-body">
+                    在线安装管理工具
+                  </div>
+                </div>
+                <div class="media align-items-center text-secondary mb-3">
+                  <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon" width="16" height="16">
+                  <div class="media-body">
+                    在线升级网站资产
+                  </div>
+                </div>
+                <div class="media align-items-center text-secondary mb-3">
+                  <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon" width="16" height="16">
+                  <div class="media-body">
+                    一键设置网站
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+            <!-- End List -->
+  
+            <a class="btn btn-primary transition-3d-hover" href="<%= url_for('docs/gettingstarted/installation.html') %>">管理工具使用详解 <small class="fas fa-arrow-right ml-1"></small></a>
+          </div>
+
+
+          <div class="col-lg-7 order-lg-2 mb-0 mb-lg-0">
+            <!-- <div class="pr-lg-5"> -->
+              <div class="rounded min-height-155 position-relative">
+                <div class="card card-frame content-centered-y col my-card">
+                  <div class="card-body my-card-body">
+                    PS > <span class="card-body-span" id="card-body-span"> Install-Module -Name APortal.PowerShell</span>  
+                    <span class="btn-primary btn my-btn" type id="card-body-btn"><i class="fas fa-copy fa-lg"></i></span>
+                  </div>
+                </div>
+              </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
     
     
         <!-- Blog News Section -->
@@ -140,7 +234,7 @@
             <!-- End Title -->
     
              <!-- News Carousel -->
-        <div class="js-slick-carousel u-slick u-slick--equal-height u-slick--gutters-3"
+          <div class="js-slick-carousel u-slick u-slick--equal-height u-slick--gutters-3"
              data-slides-show="3"
              data-slides-scroll="1"
              data-arrows-classes="d-none d-lg-inline-block u-slick__arrow u-slick__arrow--offset u-slick__arrow-centered--y rounded-circle"
@@ -168,9 +262,9 @@
             <article class="align-self-end w-100 text-center p-6">
               <h3 class="h4 text-white">APortal实施预算管理流程</h3>
               <div class="mt-4">
-                <strong class="d-block text-white-70 mb-2">LIZHENG</strong>
+                <strong class="d-block text-white-70 mb-2">水杉</strong>
                 <div class="u-avatar mx-auto">
-                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img3.jpg') %>" alt="Image Description">
+                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
                 </div>
               </div>
             </article>
@@ -182,9 +276,9 @@
             <article class="align-self-end w-100 text-center p-6">
               <h3 class="h6 font-weight-normal">大型企业的采购管理，大至机器设备、生产原材料，小至办公用品，日常耗材，往往种类繁多，涉及的供应商千差万别。如何让采购过程即合规合法，又能够高效地完成，避免因繁琐低效的采购流程对日常工作和生产造成阻滞。这无疑是众多企业的采购总监、采购经理们每天面临的挑战。我们的客户采购经理M先生同样遇到类似的问题。</h3>
               <div class="my-4">
-                <strong class="d-block mb-2">LIZHENG</strong>
+                <strong class="d-block mb-2">水杉</strong>
                 <div class="u-avatar mx-auto">
-                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img2.jpg') %>" alt="Image Description">
+                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
                 </div>
               </div>
               <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="https://blog.shuishan-tech.com/ji-yu-aportalhe-office-365ping-tai-de-dian-zi-hua-cai-gou-xi-tong-2/">阅读全文</a>
@@ -197,9 +291,9 @@
             <article class="align-self-end w-100 text-center p-6">
               <h3 class="h4 text-white">基于APortal平台实现ECN流程</h3>
               <div class="mt-4">
-                <strong class="d-block text-white-70 mb-2">LIZHENG</strong>
+                <strong class="d-block text-white-70 mb-2">水杉</strong>
                 <div class="u-avatar mx-auto">
-                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img1.jpg') %>" alt="Image Description">
+                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
                 </div>
               </div>
             </article>
@@ -211,9 +305,9 @@
             <article class="align-self-end w-100 text-center p-6">
               <h3 class="h6 font-weight-normal">大型集团企业的旗下品牌和分子公司众多，各个品牌和分子公司的业务之间既有共性，又有特性。如何让新入职员工尽快掌握众多品牌相关信息......</h3>
               <div class="my-4">
-                <strong class="d-block mb-2">LIZHENG</strong>
+                <strong class="d-block mb-2">水杉</strong>
                 <div class="u-avatar mx-auto">
-                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img3.jpg') %>" alt="Image Description">
+                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
                 </div>
               </div>
               <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="https://blog.shuishan-tech.com/ji-yu-aportalkuang-jia-da-jian-yuan-gong-ru-zhi-pei-xun-ping-tai/">阅读全文</a>
@@ -226,9 +320,9 @@
             <article class="align-self-end w-100 text-center p-6">
               <h3 class="h4 text-white">APortal助力制造业发票校验流程</h3>
               <div class="mt-4">
-                <strong class="d-block text-white-70 mb-2">LIZHENG</strong>
+                <strong class="d-block text-white-70 mb-2">水杉</strong>
                 <div class="u-avatar mx-auto">
-                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/img4.jpg') %>" alt="Image Description">
+                  <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
                 </div>
               </div>
             </article>
