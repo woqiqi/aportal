@@ -127,7 +127,7 @@ date: 2020-03-28 16:28:17
             <br /><br />
             有一条工作流任务正在等待您的处理。
         </font>
-        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size:small;" width='80%'>
+        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size:small;margin-bottom: 20px;" width='80%'>
             <tr>
                 <td style="width:10px"></td>
                 <td style="width:100px"><b>申请人：</b></td>
@@ -186,7 +186,7 @@ date: 2020-03-28 16:28:17
         Dear {Context:SSWFT.Approver.Title},
         <br /><br />
         There is a pending task in workflow system waiting for your process.
-        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size:small;">
+        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size:small;margin-bottom: 20px;">
             <tr>
                 <td style="width:10px"></td>
                 <td style="width:100px"><b>Applicant</b></td>
@@ -263,7 +263,7 @@ date: 2020-03-28 16:28:17
             <br />
             您的单据在审批过程中被拒绝并退回。
         </font>
-        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;" width="80%">
+        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;margin-bottom: 20px;" width="80%">
             <tr>
                 <td style="width:10px"></td>
                 <td style="width:100px"><b>申请时间：</b></td>
@@ -318,7 +318,7 @@ date: 2020-03-28 16:28:17
         <br />
         <br />
         Your application has been rejected and returned.
-        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;" width="80%">
+        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;margin-bottom: 20px;" width="80%">
             <tr>
                 <td style="width:10px"></td>
                 <td style="width:100px"><b>Submit Time</b></td>
@@ -390,7 +390,7 @@ date: 2020-03-28 16:28:17
             <br />
             您的申请已经审批通过。
         </font>
-        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;" width="80%">
+        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;margin-bottom: 20px;" width="80%">
             <tr>
                 <td style="width:10px;"></td>
                 <td style="width:100px;"><b>申请时间：</b></td>
@@ -445,7 +445,7 @@ date: 2020-03-28 16:28:17
         <br />
         <br />
         Your application has been approved.
-        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;" width="80%">
+        <table border='0' style="font-family:'Microsoft YaHei', Tahoma; font-size: small;margin-bottom: 20px;" width="80%">
             <tr>
                 <td style="width:10px;"></td>
                 <td style="width:100px;"><b>Submit Time</b></td>
@@ -667,7 +667,7 @@ date: 2020-03-28 16:28:17
 
 ### 逻辑计算符
 
-<table style="width: 90%; border: 2px solid rgba(119,131,143,.1);">
+<table style="width: 90%; border: 2px solid rgba(119,131,143,.1);margin-bottom: 20px;">
 <tr>
     <td style="border: 2px solid rgba(119,131,143,.1);">==</td>
     <td style="border: 2px solid rgba(119,131,143,.1);">等于</td>
@@ -742,7 +742,7 @@ date: 2020-03-28 16:28:17
 
 ### 特殊符号
 
-<table style="width: 90%; border: 2px solid rgba(119,131,143,.1);">
+<table style="width: 90%; border: 2px solid rgba(119,131,143,.1);margin-bottom: 20px;">
 <tr>
     <td style="border: 2px solid rgba(119,131,143,.1);">&</td>
     <td style="border: 2px solid rgba(119,131,143,.1);">&amp;amp;</CDATA></td>

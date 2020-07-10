@@ -1,3 +1,4 @@
 {
-    "thiefBook.currPageNumber": 120
+    "thiefBook.currPageNumber": 120,
+    "deno.enable": false
 }

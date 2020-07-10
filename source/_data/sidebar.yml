@@ -5,7 +5,13 @@ docs:
     index: index.html
     preinstallation: preinstallation.html
     installation: installation.html
-    # initialization: initialization.html
+    initialization: initialization.html
+  thefirstworkflow:
+    index: index.html
+    createlist: createlist.html
+    designform: designform.html
+    designworkflow: designworkflow.html
+    submitworkflow: submitworkflow.html
   introduction: 
     index: index.html
     orgchart: orgchart.html
