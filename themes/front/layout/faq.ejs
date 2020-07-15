@@ -17,7 +17,7 @@
           <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
             <!-- Stats -->
             <div class="text-center">
-              <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0">10年+</span>
+              <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0" id="expcountEle">0</span>
               <span class="text-secondary">行业经验</span>
             </div>
             <!-- End Stats -->
@@ -26,7 +26,7 @@
           <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
             <!-- Stats -->
             <div class="text-center">
-              <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0">50,000+</span>
+              <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0" id="usercountEle">0</span>
               <span class="text-secondary">最终用户</span>
             </div>
             <!-- End Stats -->
@@ -35,7 +35,7 @@
           <div class="col-sm-4 col-lg-3">
             <!-- Stats -->
             <div class="text-center">
-              <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0">123,456,789</span>
+              <span class="d-block h2 font-weight-semi-bold text-uppercase mb-0" id="workflowcountEle">0</span>
               <span class="text-secondary">已发起的流程数量</span>
             </div>
             <!-- End Stats -->
@@ -97,3 +97,29 @@
   </main>
   <!-- ========== END MAIN ========== -->
 <%- partial('_partial/footer1', null, {cache: !config.relative_link}) %>
+<%- js('js/countUp.min')%>
+<script>
+  let expcountEleObj = new countUp.CountUp('expcountEle', 10, {
+    duration: 1.5,
+    suffix: '年+',
+  });
+  if (!expcountEleObj.error) {
+    expcountEleObj.start();
+  }
+
+  let usercountEleObj = new countUp.CountUp('usercountEle', 50000, {
+    duration: 3,
+    suffix: '+',
+  });
+  if (!usercountEleObj.error) {
+    usercountEleObj.start();
+  }
+
+  let workflowcountObj = new countUp.CountUp('workflowcountEle', 100000000, {
+    duration: 5,
+    suffix: '+',
+  });
+  if (!workflowcountObj.error) {
+    workflowcountObj.start();
+  }
+</script>

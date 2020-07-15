@@ -82,23 +82,20 @@
     <div class="container">
       <div class="row text-center space-2 space-md-3">
         <div class="col-sm-6 col-lg-4 mb-7 mb-lg-0">
-          <div class="display-4 font-size-md-down-5 text-primary font-weight-normal">
-            10年
-            <span class="h3 text-success align-middle font-weight-semi-bold">+</span>
+          <div class="display-4 font-size-md-down-5 text-primary font-weight-normal" id="expcountEle">
+            0
           </div>
           <h4 class="h6 text-secondary">行业经验</h4>
         </div>
 
         <div class="col-sm-6 col-lg-4 mb-7 mb-lg-0">
-          <div class="display-4 font-size-md-down-5 text-primary font-weight-normal">100
-            <span class="h3 text-success align-middle font-weight-semi-bold">+</span></div>
+          <div class="display-4 font-size-md-down-5 text-primary font-weight-normal" id="usercountEle">0</div>
           <h4 class="h6 text-secondary">项目</h4>
         </div>
 
         <div class="col-sm-6 col-lg-4 mb-7 mb-lg-0">
-          <div class="display-4 font-size-md-down-5 text-primary font-weight-normal">
-            50,000
-            <span class="h3 text-success align-middle font-weight-semi-bold">+</span>
+          <div class="display-4 font-size-md-down-5 text-primary font-weight-normal" id="workflowcountEle">
+            0
           </div>
           <h4 class="h6 text-secondary">最终用户</h4>
         </div>
@@ -190,3 +187,29 @@
   </main>
   <!-- ========== END MAIN ========== -->
 <%- partial('_partial/footer1', null, {cache: !config.relative_link}) %>
+<%- js('js/countUp.min')%>
+<script>
+  let expcountEleObj = new countUp.CountUp('expcountEle', 10, {
+    duration: 1.5,
+    suffix: '年+',
+  });
+  if (!expcountEleObj.error) {
+    expcountEleObj.start();
+  }
+
+  let usercountEleObj = new countUp.CountUp('usercountEle', 100, {
+    duration: 3,
+    suffix: '+',
+  });
+  if (!usercountEleObj.error) {
+    usercountEleObj.start();
+  }
+
+  let workflowcountObj = new countUp.CountUp('workflowcountEle', 50000, {
+    duration: 5,
+    suffix: '+',
+  });
+  if (!workflowcountObj.error) {
+    workflowcountObj.start();
+  }
+</script>
