@@ -46,15 +46,20 @@
     width:150px ;
     height:55.344px;
 }
+.main_header_img.red-icon {
+    background-image:url('../images/Aportal.svg');
+}
 .mian-header:not(.js-header-fix-moment) .main_header_img{
     background-image:url('../images/logod.svg');
 }
+@media (max-width: 767.98px) {
+    .mian-header.u-header {
+        position: absolute;
+    }
+    .mian-header:not(.js-header-fix-moment) .u-header__nav-link {
+        color:#77838f;
+    }
+}
 .bg-navy {
     background-color: #21325b!important;
-}
-.bottom-n1 {
-    bottom: -1rem;
-}
-.aportal-weapp-mrn {
-  margin-right: -11rem !important;
 }
