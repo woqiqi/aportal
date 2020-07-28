@@ -1,20 +1,25 @@
 docs:
-  about: 
+  about:
     index: index.html
-  gettingstarted: 
+  gettingstarted:
     index: index.html
     preinstallation: preinstallation.html
     installation: installation.html
-    # initialization: initialization.html
-  introduction: 
+    initialization: initialization.html
+  thefirstworkflow:
+    index: index.html
+    createlist: createlist.html
+    designform: designform.html
+    designworkflow: designworkflow.html
+    submitworkflow: submitworkflow.html
+  introduction:
     index: index.html
     orgchart: orgchart.html
     workflow: workflow.html
     form: form.html
     center: center.html
-    admin: admin.html  
-  # example: 
-  #     index: index.html
-  common: 
+    weapp: weapp.html
+    admin: admin.html
+  common:
     index: index.html
     install365: install365.html

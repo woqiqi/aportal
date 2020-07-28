@@ -3,9 +3,9 @@
 <!-- End header-->
 <main id="content" role="main">
 
-    <!-- Hero Section -->
-   <!-- Hero Section -->
-   <div id="SVGheroComponents" class="svg-preloader bg-primary position-relative overflow-hidden">
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+  <div id="SVGheroComponents" class="svg-preloader bg-primary position-relative overflow-hidden">
     <!-- Content -->
     <div class="container position-relative space-3 space-top-md-5 space-lg-3 z-index-2">
       <div class="w-md-80 w-xl-60 text-center mx-md-auto">
@@ -13,16 +13,17 @@
           <h1 class="display-4 text-white mb-4">APortal</h1>
           <p class="lead text-white mb-4">基于Office 365的云端工作流框架</p>
         </div>
-        <a class="btn btn-light btn-wide transition-3d-hover" href="<%= url_for('docs/gettingstarted')%>">开始使用</a>
-        <a class="btn text-white" href="#miao1">了解更多<i class="fas fa-angle-right fa-sm ml-1"></i></a>
+        <a class="btn btn-aportal btn-wide transition-3d-hover" href="#miao1">了解更多</a>
+        <a class="btn text-white" href="<%= url_for('docs/gettingstarted')%>">开始使用<i
+            class="fas fa-angle-right fa-sm ml-1"></i></a>
       </div>
       <!-- Stats Section -->
       <div class="container space-top-0 space-top-2 space-top-lg-2">
-        <div class="row justify-content-lg-center" >
+        <div class="row justify-content-lg-center">
           <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
             <!-- Stats -->
             <div class="text-center">
-              <span class="d-block h2 font-weight-semi-bold text-white mb-0">10年+</span>
+              <span class="d-block h2 font-weight-semi-bold text-white mb-0" id="expcountEle">0</span>
               <span class="text-white">行业经验</span>
             </div>
             <!-- End Stats -->
@@ -31,7 +32,7 @@
           <div class="col-sm-4 col-lg-3 mb-7 mb-sm-0">
             <!-- Stats -->
             <div class="text-center">
-              <span class="d-block h2 font-weight-semi-bold text-white mb-0">50,000+</span>
+              <span class="d-block h2 font-weight-semi-bold text-white mb-0" id="usercountEle">0</span>
               <span class="text-white">最终用户</span>
             </div>
             <!-- End Stats -->
@@ -40,7 +41,7 @@
           <div class="col-sm-4 col-lg-3">
             <!-- Stats -->
             <div class="text-center">
-              <span class="d-block h2 font-weight-semi-bold text-white mb-0">123,456,789</span>
+              <span class="d-block h2 font-weight-semi-bold text-white mb-0" id="workflowcountEle">0</span>
               <span class="text-white">已发起的流程数量</span>
             </div>
             <!-- End Stats -->
@@ -54,415 +55,726 @@
     <!-- SVG Top Left Shapes -->
     <figure class="position-absolute top-0 left-0 w-60 ie-double-ellipse-top-left">
       <img class="js-svg-injector" src="<%= url_for('images/double-ellipse-top-left.svg') %>" alt="Image Description"
-           data-parent="#SVGheroComponents">
+        data-parent="#SVGheroComponents">
     </figure>
     <!-- End SVG Top Left Shapes -->
 
     <!-- SVG Bottom Right Shapes -->
     <figure class="position-absolute right-0 bottom-0 w-15 ie-double-ellipse-bottom-right">
-      <img class="js-svg-injector" src="<%= url_for('images/double-ellipse-bottom-right.svg') %>" alt="Image Description"
-           data-parent="#SVGheroComponents">
+      <img class="js-svg-injector" src="<%= url_for('images/double-ellipse-bottom-right.svg') %>"
+        alt="Image Description" data-parent="#SVGheroComponents">
     </figure>
     <!-- End SVG Bottom Right Shapes -->
     <!-- SVG Bottom Shape -->
-    <figure class="position-absolute right-0 bottom-n1 left-0" >
+    <figure class="position-absolute right-0 bottom-n1 left-0">
       <img class="js-svg-injector" src="<%= url_for('images/curved-1.svg') %>" alt="Image Description"
-           data-parent="#SVGheroComponents">
+        data-parent="#SVGheroComponents">
     </figure>
     <!-- End SVG Bottom Shape -->
   </div>
   <!-- End Hero Section -->
-    <!-- End Hero Section -->
-    
-    <!-- Features Section -->
-    <div class="container space-2" id="miao1">
+  <!-- End Hero Section -->
+
+  <!-- Features Section -->
+  <div class="container space-2" id="miao1">
+    <!-- Title -->
+    <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+      <!-- <h2 class="h1">功能亮点</h2> -->
+      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-2">
+        <span class="btn btn-xs btn-soft-success btn-pill mb-2">功能亮点</span>
+      </div>
+      <p>APortal帮助您快速实现业务流程自动化</p>
+    </div>
+    <!-- End Title -->
+
+    <div class="space-bottom-2 row mx-n2">
+      <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
+        <!-- Icon Blocks -->
+        <a class="card h-100 transition-3d-hover" href="<%= url_for('docs/introduction/orgchart.html')%>">
+          <div class="card-body">
+            <figure class="ie-height-56 w-100 max-width-8 mb-4">
+              <img class="img-fluid" src="<%= url_for('images/icon-9.svg') %>" alt="SVG">
+            </figure>
+            <h4 class="text-body">组织结构管理</h4>
+            <p class="font-size-1 text-body mb-0">强大而灵活的组织结构管理方式：小至单层部门的小型企业，多至集团公司/分、子公司/多层级部门的大型组织。</p>
+          </div>
+          <div class="card-footer border-0 pt-0">
+            <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+          </div>
+        </a>
+        <!-- End Icon Blocks -->
+      </div>
+
+      <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
+        <!-- Icon Blocks -->
+        <a class="card h-100 transition-3d-hover" href="<%= url_for('docs/introduction/workflow.html')%>">
+          <div class="card-body">
+            <figure class="ie-height-56 w-100 max-width-8 mb-4">
+              <img class="img-fluid" src="<%= url_for('images/icon-3.svg') %>" alt="SVG">
+            </figure>
+            <h4 class="text-body">流程设计</h4>
+            <p class="font-size-1 text-body mb-0">多种复杂流程功能：节点跳转，流程追回，前、后加签，临时追加审批人，要求解释，预审，超时提醒，流程自动代理等近百种流程特色功能和操作。</p>
+          </div>
+          <div class="card-footer border-0 pt-0">
+            <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+          </div>
+        </a>
+        <!-- End Icon Blocks -->
+      </div>
+
+      <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-sm-0">
+        <!-- Icon Blocks -->
+        <a class="card h-100 transition-3d-hover" href="<%= url_for('docs/introduction/form.html')%>">
+          <div class="card-body">
+            <figure class="ie-height-56 w-100 max-width-8 mb-4">
+              <img class="img-fluid" src="<%= url_for('images/icon-5.svg') %>" alt="SVG">
+            </figure>
+            <h4 class="text-body">表单配置</h4>
+            <p class="font-size-1 text-body mb-0">在线表单设计器帮助用户快速配置和生成表单页面。符合HTML5标准和前端布局规则，自动适应屏幕类型。</p>
+            <p class="font-size-1 text-body mb-0">表单数据与OneDrive和SharePoint列表无缝集成。</p>
+          </div>
+          <div class="card-footer border-0 pt-0">
+            <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+          </div>
+        </a>
+        <!-- End Icon Blocks -->
+      </div>
+
+      <div class="col-sm-6 col-lg-3 px-2">
+        <!-- Icon Blocks -->
+        <a class="card h-100 transition-3d-hover" href="<%= url_for('docs/introduction/center.html')%>">
+          <div class="card-body">
+            <figure class="ie-height-56 w-100 max-width-8 mb-4">
+              <img class="img-fluid" src="<%= url_for('images/icon-2.svg') %>" alt="SVG">
+            </figure>
+            <h4 class="text-body">工作流中心</h4>
+            <p class="font-size-1 text-body mb-0">在APortal工作流中心，用户可以填写并提交流程，审批、搜索、导出流程数据。</p>
+          </div>
+          <div class="card-footer border-0 pt-0">
+            <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+          </div>
+        </a>
+        <!-- End Icon Blocks -->
+      </div>
+    </div>
+
+    <div class="overflow-hidden container space-bottom-2">
+      <div class="space-2 space-lg-2">
+        <!-- Title -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-2">
+            <span class="btn btn-xs btn-soft-success btn-pill mb-2">微信小程序</span>
+          </div>
+        </div>
+        <!-- End Title -->
+        <div class="row justify-content-lg-between align-items-lg-center">
+          <div class="col-lg-6 mb-9 mb-lg-0">
+            <!-- Mockups -->
+            <div class="position-relative max-w-40rem mx-auto">
+              <div class="device device-iphone-x w-85 mx-auto">
+                <img class="device-iphone-x-frame" src="images/iphone-x.svg" alt="Image Description">
+                <img class="device-iphone-x-screen" src="images/407x867/home.jpg" alt="Image Description">
+              </div>
+              <!-- 
+              <div class="position-absolute top-0 right-0 z-index-2 max-w-27rem aportal-weapp-mrn mt-1 ">
+                <img class="img-fluid shadow-lg rounded" src="images/weapp1.png" alt="Image Description">
+              </div>
+              <div class="position-absolute bottom-0 left-0 z-index-2 max-w-33rem ml-n10 mb-10">
+                <img class="img-fluid shadow-lg rounded" src="images/480x320/weapp.png" alt="Image Description">
+              </div> -->
+
+              <div class="position-absolute bottom-0 right-0 max-w-50rem w-100 z-index-n1 mx-auto">
+                <img class="img-fluid" src="images/abstract-shapes-3.svg" alt="Image Description">
+              </div>
+            </div>
+            <!-- End Mockups -->
+          </div>
+
+          <div class="col-lg-5">
+            <div class="mb-5">
+              <h2>APortal微信小程序</h2>
+            </div>
+
+            <!-- Icon Block -->
+            <ul class="step step-dashed mb-7">
+              <li class="step-item mb-0">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-xs step-icon-soft-primary">1</span>
+                  <div class="step-content">
+                    <h4 class="h4">手机登录</h3>
+                      <p>用户通过自己在APortal工作流中心登记的手机号码接收系统验证码，验证后登录APortal微信小程序。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="step-item mb-0">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-xs step-icon-soft-primary">2</span>
+                  <div class="step-content">
+                    <h4>单据审批</h4>
+                    <p>用户可随时随地通过登录APortal微信小程序审批流程单据。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="step-item mb-0">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-xs step-icon-soft-primary">3</span>
+                  <div class="step-content">
+                    <h4>状态查询</h4>
+                    <p>用户对自己提交的单据状态，也可随时通过APortal微信小程序进行查询。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="step-item mb-0">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-xs step-icon-soft-primary">4</span>
+                  <div class="step-content">
+                    <h4>多语言支持</h4>
+                    <p>支持中/英文界面语言自由切换。</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- End Icon Block -->
+
+            <div class="mt-2">
+              <a class="btn btn-primary transition-3d-hover px-4"
+                href="<%= url_for('docs/introduction/weapp.html')%>">了解详情 <small
+                  class="fas fa-arrow-right ml-1"></small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container space-bottom-2">
       <!-- Title -->
       <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
         <!-- <h2 class="h1">功能亮点</h2> -->
         <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-2">
-          <span class="btn btn-xs btn-soft-success btn-pill mb-2">功能亮点</span>
+          <span class="btn btn-xs btn-soft-success btn-pill mb-2">管理工具</span>
         </div>
-        <p>APortal帮助您快速实现业务流程自动化</p>
+        <p>APortal 管理工具为 Office 365 赋予丰富的 APortal 能力</p>
       </div>
       <!-- End Title -->
-    
-      <div class="row mx-n2">
-        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-9.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">组织结构</h4>
-              <p class="font-size-1 text-body mb-0">强大而灵活的组织结构管理方式：小至单层部门的小型企业，多至集团公司/分、子公司/多层级部门的大型组织。</p>
+      <div class="row align-items-lg-center">
+
+        <div class="col-lg-5 order-lg-1">
+          <!-- <div class="mb-5">
+              <p>使用 PowerShell 包管理工具安装 APortal 管理工具，使用 APortal 管理工具为您的Office 365 网站赋予丰富的 APortal 能力。</p>
+            </div> -->
+
+          <!-- List -->
+          <div class="row mb-4">
+            <div class="col-6">
+              <div class="media align-items-center text-secondary mb-3">
+                <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon"
+                  width="16" height="16">
+                <div class="media-body">
+                  在线安装管理工具
+                </div>
+              </div>
+              <div class="media align-items-center text-secondary mb-3">
+                <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon"
+                  width="16" height="16">
+                <div class="media-body">
+                  在线升级网站资产
+                </div>
+              </div>
+              <div class="media align-items-center text-secondary mb-3">
+                <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon"
+                  width="16" height="16">
+                <div class="media-body">
+                  一键设置网站
+                </div>
+              </div>
             </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
+
+          </div>
+          <!-- End List -->
+
+          <a class="btn btn-primary transition-3d-hover"
+            href="<%= url_for('docs/gettingstarted/installation.html') %>">管理工具使用详解 <small
+              class="fas fa-arrow-right ml-1"></small></a>
         </div>
-    
-        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-3.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">流程设计</h4>
-              <p class="font-size-1 text-body mb-0">多种复杂流程功能：节点跳转，流程追回，前、后加签，临时追加审批人，要求解释，预审，超时提醒，流程自动代理等近百种流程特色功能和操作。</p>
+
+
+        <div class="col-lg-7 order-lg-2 mb-0 mb-lg-0">
+          <!-- <div class="pr-lg-5"> -->
+          <div class="rounded min-height-155 position-relative">
+            <div class="card card-frame content-centered-y col my-card">
+              <div class="card-body my-card-body">
+                PS > <span class="card-body-span" id="card-body-span"> Install-Module -Name APortal.PowerShell</span>
+                <span class="btn-primary btn my-btn" type id="card-body-btn"><i class="fas fa-copy fa-lg"></i></span>
+              </div>
             </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
-        </div>
-    
-        <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-sm-0">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-5.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">表单配置</h4>
-              <p class="font-size-1 text-body mb-0">在线表单设计器帮助用户快速配置和生成表单页面。符合HTML5标准和前端布局规则，自动适应屏幕类型。</p>
-              <p class="font-size-1 text-body mb-0">表单数据与OneDrive和SharePoint列表无缝集成。</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
-        </div>
-    
-        <div class="col-sm-6 col-lg-3 px-2">
-          <!-- Icon Blocks -->
-          <a class="card h-100 transition-3d-hover" href="#">
-            <div class="card-body">
-              <figure class="ie-height-56 w-100 max-width-8 mb-4">
-                <img class="img-fluid" src="<%= url_for('images/icon-2.svg') %>" alt="SVG">
-              </figure>
-              <h4 class="text-body">工作流中心</h4>
-              <p class="font-size-1 text-body mb-0">在APortal工作流中心，用户可以填写并提交流程，审批、搜索、导出流程数据。</p>
-              <p class="font-size-1 text-body mb-0">通过APortal微信小程序，用户还可以随时随地移动接入工作流中心，对自己的审批任务进行处理，实时跟踪流程状态。</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <span class="font-size-1">了解更多 <i class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Icon Blocks -->
+          </div>
+          <!-- </div> -->
         </div>
       </div>
-      <div class="container">
-        <div class="space-2 space-lg-2">
-          <!-- Title -->
-          <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-            <!-- <h2 class="h1">功能亮点</h2> -->
-            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-2">
-              <span class="btn btn-xs btn-soft-success btn-pill mb-2">管理工具</span>
-            </div>
-            <p>APortal 管理工具为 Office 365 赋予丰富的 APortal 能力</p>
-          </div>
-          <!-- End Title -->
-          <div class="row align-items-lg-center">
-    
-            <div class="col-lg-5 order-lg-1">
-              <!-- <div class="mb-5">
-                <p>使用 PowerShell 包管理工具安装 APortal 管理工具，使用 APortal 管理工具为您的Office 365 网站赋予丰富的 APortal 能力。</p>
-              </div> -->
-    
-              <!-- List -->
-              <div class="row mb-4">
-                <div class="col-6">
-                  <div class="media align-items-center text-secondary mb-3">
-                    <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon" width="16" height="16">
-                    <div class="media-body">
-                      在线安装管理工具
-                    </div>
-                  </div>
-                  <div class="media align-items-center text-secondary mb-3">
-                    <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon" width="16" height="16">
-                    <div class="media-body">
-                      在线升级网站资产
-                    </div>
-                  </div>
-                  <div class="media align-items-center text-secondary mb-3">
-                    <img class="mr-2" src="<%= url_for('css/images/svg/components/checked-icon.svg') %>" alt="Icon" width="16" height="16">
-                    <div class="media-body">
-                      一键设置网站
-                    </div>
-                  </div>
-                </div>
-    
-              </div>
-              <!-- End List -->
-    
-              <a class="btn btn-primary transition-3d-hover" href="<%= url_for('docs/gettingstarted/installation.html') %>">管理工具使用详解 <small class="fas fa-arrow-right ml-1"></small></a>
-            </div>
-  
-  
-            <div class="col-lg-7 order-lg-2 mb-0 mb-lg-0">
-              <!-- <div class="pr-lg-5"> -->
-                <div class="rounded min-height-155 position-relative">
-                  <div class="card card-frame content-centered-y col my-card">
-                    <div class="card-body my-card-body">
-                      PS > <span class="card-body-span" id="card-body-span"> Install-Module -Name APortal.PowerShell</span>  
-                      <span class="btn-primary btn my-btn" type id="card-body-btn"><i class="fas fa-copy fa-lg"></i></span>
-                    </div>
-                  </div>
-                </div>
-              <!-- </div> -->
-            </div>
-          </div>
-        </div>
+    </div>
+    <!-- Blog News Section -->
+
+    <div class="container space-bottom-2">
+      <!-- Title -->
+      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
+        <span class="btn btn-xs btn-soft-success btn-pill mb-2">新闻 &amp; 博客</span>
       </div>
-      <!-- Blog News Section -->
-      <div >
-        <div class="container space-2 space-md-3 px-lg-7">
-          <!-- Title -->
-          <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
-            <span class="btn btn-xs btn-soft-success btn-pill mb-2">新闻 &amp; 博客</span>
-          </div>
-          <!-- End Title -->
-  
-           <!-- News Carousel -->
-        <div class="js-slick-carousel u-slick u-slick--equal-height u-slick--gutters-3"
-           data-slides-show="3"
-           data-slides-scroll="1"
-           data-arrows-classes="d-none d-lg-inline-block u-slick__arrow u-slick__arrow--offset u-slick__arrow-centered--y rounded-circle"
-           data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-inner u-slick__arrow-inner--left"
-           data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-inner u-slick__arrow-inner--right"
-           data-pagi-classes="text-center u-slick__pagination mt-7 mb-0"
-           data-responsive='[{
-             "breakpoint": 992,
-             "settings": {
-               "slidesToShow": 2
-             }
-           }, {
-             "breakpoint": 768,
-             "settings": {
-               "slidesToShow": 1
-             }
-           }, {
-             "breakpoint": 554,
-             "settings": {
-               "slidesToShow": 1
-             }
-           }]'>
-        <!-- Blog News -->
-        <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="https://blog.shuishan-tech.com/aportalshi-shi-yu-suan-guan-li-liu-cheng/" style="background-image: url(images/photo-of-golden-cogwheel-on-black-background-3785930.jpg);">
-          <article class="align-self-end w-100 text-center p-6">
-            <h3 class="h4 text-white">APortal实施预算管理流程</h3>
-            <div class="mt-4">
-              <strong class="d-block text-white-70 mb-2">水杉</strong>
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
-              </div>
-            </div>
-          </article>
-        </a>
-        <!-- End Blog News -->
+      <!-- End Title -->
 
-        <!-- Blog News -->
-        <div class="js-slide position-relative bg-white shadow-sm transition-3d-hover rounded my-4">
-          <article class="align-self-end w-100 text-center p-6">
-            <h3 class="h6 font-weight-normal">大型企业的采购管理，大至机器设备、生产原材料，小至办公用品，日常耗材，往往种类繁多，涉及的供应商千差万别。如何让采购过程即合规合法，又能够高效地完成，避免因繁琐低效的采购流程对日常工作和生产造成阻滞。这无疑是众多企业的采购总监、采购经理们每天面临的挑战。我们的客户采购经理M先生同样遇到类似的问题。</h3>
-            <div class="my-4">
-              <strong class="d-block mb-2">水杉</strong>
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
+      <!-- News Carousel -->
+      <div class="js-slick-carousel u-slick u-slick--equal-height u-slick--gutters-3" data-slides-show="3"
+        data-slides-scroll="1"
+        data-arrows-classes="d-none d-lg-inline-block u-slick__arrow u-slick__arrow--offset u-slick__arrow-centered--y rounded-circle"
+        data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-inner u-slick__arrow-inner--left"
+        data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-inner u-slick__arrow-inner--right"
+        data-pagi-classes="text-center u-slick__pagination mt-7 mb-0" data-responsive='[{
+           "breakpoint": 992,
+           "settings": {
+             "slidesToShow": 2
+           }
+         }, {
+           "breakpoint": 768,
+           "settings": {
+             "slidesToShow": 1
+           }
+         }, {
+           "breakpoint": 554,
+           "settings": {
+             "slidesToShow": 1
+           }
+         }]'>
+
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog1.jpg') %>" alt="基于APortal框架搭建企业工作流平台">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/aportal/">APortal</a>
+              <h2 class="h4">
+                <a
+                  href="https://blog.shuishan-tech.com/ji-yu-aportalkuang-jia-da-jian-qi-ye-gong-zuo-liu-ping-tai/">基于APortal框架搭建企业工作流平台</a>
+              </h2>
+              <p>APortal是基于SharePoint平台研发的工作流框架，即可以部署到基于Office 365平台的SharePoint Online站点，又可以部署在企业内部自行部署的SharePoint服务器上。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  14 JUL 2020
+                </div>
               </div>
             </div>
-            <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="https://blog.shuishan-tech.com/ji-yu-aportalhe-office-365ping-tai-de-dian-zi-hua-cai-gou-xi-tong-2/">阅读全文</a>
           </article>
         </div>
-        <!-- End Blog News -->
+        <!-- End Blog Card -->
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog3.jpg') %>" alt="SharePoint平台上的订单管理系统">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a href="https://blog.shuishan-tech.com/sharepoint/">SharePoint平台上的订单管理系统
+                </a>
+              </h2>
+              <p>
+                SharePoint平台是一个以文档管理、内容分享、流程控制等功能见长的，优秀的团队合作平台。基于其强大的流程控制功能和数据管理能力，水杉公司在长期帮助客户实施SharePoint平台的过程中，也利用SharePoint平台帮助我们的客户实施了很多和他们实际业务紧密关联的业务系统。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
 
-        <!-- Blog News -->
-        <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="https://blog.shuishan-tech.com/ji-yu-aportalping-tai-shi-xian-ecnliu-cheng/" style="background-image: url(images/adult-architect-blueprint-business-416405.jpg);">
-          <article class="align-self-end w-100 text-center p-6">
-            <h3 class="h4 text-white">基于APortal平台实现ECN流程</h3>
-            <div class="mt-4">
-              <strong class="d-block text-white-70 mb-2">水杉</strong>
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  2 DEC 2017
+                </div>
               </div>
             </div>
-          </article>
-        </a>
-        <!-- End Blog News -->
-
-        <!-- Blog News -->
-        <div class="js-slide position-relative bg-white shadow-sm transition-3d-hover rounded my-4">
-          <article class="align-self-end w-100 text-center p-6">
-            <h3 class="h6 font-weight-normal">大型集团企业的旗下品牌和分子公司众多，各个品牌和分子公司的业务之间既有共性，又有特性。如何让新入职员工尽快掌握众多品牌相关信息......</h3>
-            <div class="my-4">
-              <strong class="d-block mb-2">水杉</strong>
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
-              </div>
-            </div>
-            <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="https://blog.shuishan-tech.com/ji-yu-aportalkuang-jia-da-jian-yuan-gong-ru-zhi-pei-xun-ping-tai/">阅读全文</a>
           </article>
         </div>
-        <!-- End Blog News -->
+        <!-- End Blog Card -->
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog2.jpg') %>" alt="基于Office 365帮助小型企业构建协同工作平台">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a href="https://blog.shuishan-tech.com/o365case1/">基于Office 365帮助小型企业构建协同工作平台
+                </a>
+              </h2>
+              <p>这是一个外资企业在中国的采购办公室，用户总数在30人左右，主要人员在上海浦西的某个写字楼里办公，在深圳、广州、北京等城市有少量雇员，采用家庭办公室的方式开展工作。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
 
-        <!-- Blog News -->
-        <a class="js-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4" href="https://blog.shuishan-tech.com/aportalzhu-li-zhi-zao-ye-fa-piao-xiao-yan-liu-cheng/" style="background-image: url(images/--1-2.jpg);">
-          <article class="align-self-end w-100 text-center p-6">
-            <h3 class="h4 text-white">APortal助力制造业发票校验流程</h3>
-            <div class="mt-4">
-              <strong class="d-block text-white-70 mb-2">水杉</strong>
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/Aicon.png') %>" alt="Image Description">
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  1 DEC 2017
+                </div>
               </div>
             </div>
           </article>
-        </a>
-        <!-- End Blog News -->
+        </div>
+        <!-- End Blog Card -->
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog4.jpg') %>" alt="基于APortal实施的全球供应商门户">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a
+                  href="https://blog.shuishan-tech.com/ji-yu-aportalshi-shi-de-quan-qiu-gong-ying-shang-men-hu/">基于APortal实施的全球供应商门户</a>
+              </h2>
+              <p>系统帮助企业构成从SAP订单数据到供应商发运，仓库收货，SAP收货，供应商开票，SAP过账的完整数据闭环。企业用户和供应商用户同平台操作，避免了数据不一致带来的重复劳动和返工。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  9 JUN 2020
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End Blog Card -->
+
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog5.jpg') %>" alt="APortal实施预算管理流程">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a href="https://blog.shuishan-tech.com/aportalshi-shi-yu-suan-guan-li-liu-cheng/">APortal实施预算管理流程</a>
+              </h2>
+              <p>预算管理是企业常见流程之一，通常预算管理分为两个主要步骤：预算编制和批准，预算执行。本文主要介绍基于APortal和SharePoint平台为客户实施的预算执行流程。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  18 JUN 2020
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End Blog Card -->
+
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog6.jpg') %>"
+              alt="基于APortal和Office 365平台的电子化采购系统">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a
+                  href="https://blog.shuishan-tech.com/ji-yu-aportalhe-office-365ping-tai-de-dian-zi-hua-cai-gou-xi-tong-2/">基于APortal和Office
+                  365平台的电子化采购系统</a>
+              </h2>
+              <p>大型企业的采购管理，大至机器设备、生产原材料，小至办公用品，日常耗材，往往种类繁多，涉及的供应商千差万别。如何让采购过程即合规合法，又能够高效地完成，避免因繁琐低效的采购流程对日常工作和生产造成阻滞。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  17 JUN 2020
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End Blog Card -->
+
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog7.jpg') %>" alt="基于APortal平台实现ECN流程">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a
+                  href="https://blog.shuishan-tech.com/ji-yu-aportalping-tai-shi-xian-ecnliu-cheng/">基于APortal平台实现ECN流程</a>
+              </h2>
+              <p>ECN（Engineering Change
+                Notice）即工程变更通知书。工厂中的任何受控资料需要变更时，均需以ECN形式提出经相关单位会签批准后方可生效。某制造业工厂的ECN流程分为评估、验证、实施等多个阶段...
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  14 JUN 2020
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End Blog Card -->
+
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog8.jpg') %>" alt="基于APortal框架搭建员工入职培训平台">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a
+                  href="https://blog.shuishan-tech.com/ji-yu-aportalkuang-jia-da-jian-yuan-gong-ru-zhi-pei-xun-ping-tai/">基于APortal框架搭建员工入职培训平台</a>
+              </h2>
+              <p>系统上线以后，迅速成为HR部门培训新员工的重要工具。而且由于系统基于Office
+                365实施，员工无论在公司内外，只要能连接网络就可以随时浏览和完成入职培训计划。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  28 JUN 2020
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End Blog Card -->
+
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog9.jpg') %>" alt="APortal助力制造业发票校验流程">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a
+                  href="https://blog.shuishan-tech.com/aportalzhu-li-zhi-zao-ye-fa-piao-xiao-yan-liu-cheng/">APortal助力制造业发票校验流程</a>
+              </h2>
+              <p>基于APortal工作流框架，连接外部云服务器，基于Office 365的SharePoint Online站点，SAP系统，并结合二维码扫描技术实现的发票校验系统。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  25 JUN 2020
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End Blog Card -->
+
+        <!-- Blog Card -->
+        <div class="s-slide bg-img-hero gradient-overlay-half-dark-v1 transition-3d-hover rounded-pseudo my-4">
+          <article class="card shadow h-100">
+            <img class="card-img-top" src="<%= url_for('images/blog/blog10.jpg') %>" alt="使用SharePoint快速分发Excel应用">
+            <div class="card-body p-5">
+              <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
+                href="https://blog.shuishan-tech.com/tag/case-study/">Case Study</a>
+              <h2 class="h4">
+                <a
+                  href="https://blog.shuishan-tech.com/shi-yong-sharepointkuai-su-fen-fa-excelying-yong/">使用SharePoint快速分发Excel应用</a>
+              </h2>
+              <p>每个企业都暗藏着一些Excel高手，他们可以熟练地使用Excel，利用Excel强大的公式和VBA代码对企业数据进行复杂的业务处理。
+              </p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+              <div class="media align-items-center">
+
+                <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                  6 JUL 2020
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End Blog Card -->
       </div>
       <!-- End News Carousel -->
-        </div>
+    </div>
+    <div class="text-center mb-4">
+      <h2 class="u-divider u-divider--text">荣誉客户</h2>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/Microsoft.png" alt="Image Description">
       </div>
-      <div class="text-center mb-4">
-        <h2 class="u-divider u-divider--text">荣誉客户</h2>
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/LVMH.png" alt="Image Description">
       </div>
-      <div class="row justify-content-center text-center">
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/Microsoft.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/LVMH.png" alt="Image Description">
-        </div>
 
-        <div class="w-100"></div>
+      <div class="w-100"></div>
 
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/Roquette.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/Estra.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/k11.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/SKY.png" alt="Image Description">
-        </div>
-
-        <div class="w-100"></div>
-
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/Brother.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/insigma.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/新世界百货.png" alt="Image Description">
-        </div>
-        
-        <div class="col-4 col-md-2 mb-8 mb-md-0">
-          <img class="u-clients" src="images/logos/国泰君安.png" alt="Image Description">
-        </div>
-
-        <div class="w-100"></div>
-
-
-        <div class="col-4 col-md-2 mb-8 mb-md-0">
-          <img class="u-clients" src="images/logos/ECM.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2">
-          <img class="u-clients" src="images/logos/HITACHI.png" alt="Image Description">
-        </div>
-      
-
-
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/interplex.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/coopertires.png" alt="Image Description">
-        </div>
-        <div class="col-4 col-md-2 mb-8">
-          <img class="u-clients" src="images/logos/Career.png" alt="Image Description">
-        </div>
-
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/Roquette.png" alt="Image Description">
       </div>
-      <!-- SVG Quote -->
-      <figure class="text-center mb-5">
-        <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
-          height="40px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
-          <path class="fill-primary" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/Estra.png" alt="Image Description">
+      </div>
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/k11.png" alt="Image Description">
+      </div>
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/SKY.png" alt="Image Description">
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/Brother.png" alt="Image Description">
+      </div>
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/insigma.png" alt="Image Description">
+      </div>
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/nwds.png" alt="Image Description">
+      </div>
+
+      <div class="col-4 col-md-2 mb-8 mb-md-0">
+        <img class="u-clients" src="images/logos/gtja.png" alt="Image Description">
+      </div>
+
+      <div class="w-100"></div>
+
+
+      <div class="col-4 col-md-2 mb-8 mb-md-0">
+        <img class="u-clients" src="images/logos/ECM.png" alt="Image Description">
+      </div>
+      <div class="col-4 col-md-2">
+        <img class="u-clients" src="images/logos/HITACHI.png" alt="Image Description">
+      </div>
+
+
+
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/interplex.png" alt="Image Description">
+      </div>
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/coopertires.png" alt="Image Description">
+      </div>
+      <div class="col-4 col-md-2 mb-8">
+        <img class="u-clients" src="images/logos/Career.png" alt="Image Description">
+      </div>
+
+    </div>
+    <!-- SVG Quote -->
+    <figure class="text-center mb-5">
+      <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
+        height="40px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+        <path class="fill-primary" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
             C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3
             c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8
             C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z" />
-        </svg>
-      </figure>
-      <!-- End SVG Quote -->
-      <!-- Testimonials Carousel Main -->
-      <div id="testimonialsNavMain" class="js-slick-carousel u-slick mb-4" data-infinite="true" data-autoplay="true"
-        data-speed="5000" data-fade="true" data-nav-for="#testimonialsNavPagination" data-autoplay-speed="5000">
-        <div class="js-slide">
-          <!-- Testimonials -->
-          <div class="w-md-80 w-lg-60 text-center mx-auto">
-            <blockquote class="mb-5">水杉基于Office 365平台构建的工作流和协同办公系统提供的一站式服务，能够很好地满足我们作为一个独立的小型业务单元在日常工作中所需的绝大部分办公流程、工作沟通和业务数据记录汇总功能。
-            </blockquote>
-            <h4 class="h6 text-muted">跨国企业中国区采购办公室，总经理，Peter</h4>
-          </div>
-          <!-- End Testimonials -->
+      </svg>
+    </figure>
+    <!-- End SVG Quote -->
+    <!-- Testimonials Carousel Main -->
+    <div id="testimonialsNavMain" class="js-slick-carousel u-slick mb-4" data-infinite="true" data-autoplay="true"
+      data-speed="5000" data-fade="true" data-nav-for="#testimonialsNavPagination" data-autoplay-speed="5000">
+      <div class="js-slide">
+        <!-- Testimonials -->
+        <div class="w-md-80 w-lg-60 text-center mx-auto">
+          <blockquote class="mb-5">水杉基于Office
+            365平台构建的工作流和协同办公系统提供的一站式服务，能够很好地满足我们作为一个独立的小型业务单元在日常工作中所需的绝大部分办公流程、工作沟通和业务数据记录汇总功能。
+          </blockquote>
+          <h4 class="h6 text-muted">跨国企业中国区采购办公室，总经理，Peter</h4>
         </div>
+        <!-- End Testimonials -->
+      </div>
 
-        <div class="js-slide">
-          <!-- Testimonials -->
-          <div class="w-md-80 w-lg-60 text-center mx-auto">
-            <blockquote class="mb-5">连锁百货行业内部业务流程种类繁杂，跨部门、跨区域、跨组织结构层级的情况非常普遍。水杉公司在SharePoint平台上搭建了BPM系统，并实施了上百个业务流程，完美应对了我们在内部业务流程管控方面的需求。水杉项目团队在日常服务过程中表现出的耐心、细致和专业化程度，给我们留下很深的印象。
-            </blockquote>
-            <h4 class="h6 text-muted">连锁百货行业领军企业，IT总经理，Mark</h4>
-          </div>
-          <!-- End Testimonials -->
+      <div class="js-slide">
+        <!-- Testimonials -->
+        <div class="w-md-80 w-lg-60 text-center mx-auto">
+          <blockquote class="mb-5">
+            连锁百货行业内部业务流程种类繁杂，跨部门、跨区域、跨组织结构层级的情况非常普遍。水杉公司在SharePoint平台上搭建了BPM系统，并实施了上百个业务流程，完美应对了我们在内部业务流程管控方面的需求。水杉项目团队在日常服务过程中表现出的耐心、细致和专业化程度，给我们留下很深的印象。
+          </blockquote>
+          <h4 class="h6 text-muted">连锁百货行业领军企业，IT总经理，Mark</h4>
         </div>
+        <!-- End Testimonials -->
+      </div>
 
-        <div class="js-slide">
-          <!-- Testimonials -->
-          <div class="w-md-80 w-lg-60 text-center mx-auto">
-            <blockquote class="mb-5">中国国有企业，在全球化扩张和建设的进程中面临了市场拓展、业务增长、不同地区文化协同等新的挑战，信息技术系统在这个过程中是一个有效帮助企业实现战略目标的工具。选择合适的技术手段，采用专业的合作伙伴是建设有效信息系统的必要手段。在全球Intranet的建设过程中，我们寻找到了优秀的合作伙伴，通过双方的协同工作建设了一个可以高效集成不同办公和业务系统的平台。</blockquote>
-            <h4 class="h6 text-muted">汽车空调行业领先企业，全球IT负责人，Erwin</h4>
-          </div>
-          <!-- End Testimonials -->
+      <div class="js-slide">
+        <!-- Testimonials -->
+        <div class="w-md-80 w-lg-60 text-center mx-auto">
+          <blockquote class="mb-5">
+            中国国有企业，在全球化扩张和建设的进程中面临了市场拓展、业务增长、不同地区文化协同等新的挑战，信息技术系统在这个过程中是一个有效帮助企业实现战略目标的工具。选择合适的技术手段，采用专业的合作伙伴是建设有效信息系统的必要手段。在全球Intranet的建设过程中，我们寻找到了优秀的合作伙伴，通过双方的协同工作建设了一个可以高效集成不同办公和业务系统的平台。
+          </blockquote>
+          <h4 class="h6 text-muted">汽车空调行业领先企业，全球IT负责人，Erwin</h4>
+        </div>
+        <!-- End Testimonials -->
+      </div>
+    </div>
+    <!-- End Testimonials Carousel Main -->
+    <!-- Testimonials Carousel Pagination -->
+    <div id="testimonialsNavPagination"
+      class="js-slick-carousel u-slick u-slick--pagination-modern u-slick--transform-off mx-auto" data-infinite="true"
+      data-autoplay="true" data-speed="5000" data-focus-on-select="true" data-center-mode="true" data-slides-show="3"
+      data-is-thumbs="true" data-nav-for="#testimonialsNavMain">
+      <div class="js-slide">
+        <div class="u-avatar mx-auto">
+          <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/customer5.png') %>"
+            alt="Image Description">
         </div>
       </div>
-      <!-- End Testimonials Carousel Main -->
-      <!-- Testimonials Carousel Pagination -->
-          <div id="testimonialsNavPagination"
-          class="js-slick-carousel u-slick u-slick--pagination-modern u-slick--transform-off mx-auto" data-infinite="true"
-          data-autoplay="true" data-speed="5000" data-focus-on-select="true" data-center-mode="true" data-slides-show="3"
-          data-is-thumbs="true" data-nav-for="#testimonialsNavMain">
-            <div class="js-slide">
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/customer1.png') %>" alt="Image Description">
-              </div>
-            </div>
 
-            <div class="js-slide">
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/customer1.png') %>" alt="Image Description">
-              </div>
-            </div>
+      <div class="js-slide">
+        <div class="u-avatar mx-auto">
+          <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/customer6.png') %>"
+            alt="Image Description">
+        </div>
+      </div>
 
-            <div class="js-slide">
-              <div class="u-avatar mx-auto">
-                <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/customer1.png') %>" alt="Image Description">
-              </div>
-            </div>
-          </div>
-        <!-- End Testimonials Carousel Pagination -->
-      <!-- End Blog News Section -->
+      <div class="js-slide">
+        <div class="u-avatar mx-auto">
+          <img class="img-fluid rounded-circle" src="<%= url_for('images/100x100/customer7.png') %>"
+            alt="Image Description">
+        </div>
+      </div>
     </div>
-    <!-- End Features Section -->
-  </main>
+    <!-- End Testimonials Carousel Pagination -->
+    <!-- End Blog News Section -->
+  </div>
+  <!-- End Features Section -->
+</main>
 <%- partial('_partial/footer1', null, {cache: !config.relative_link}) %>
+<%- js('js/countUp.min')%>
+<script>
+  let expcountEleObj = new countUp.CountUp('expcountEle', 10, {
+    duration: 1.5,
+    suffix: '年+',
+  });
+  if (!expcountEleObj.error) {
+    expcountEleObj.start();
+  }
+
+  let usercountEleObj = new countUp.CountUp('usercountEle', 50000, {
+    duration: 3,
+    suffix: '+',
+  });
+  if (!usercountEleObj.error) {
+    usercountEleObj.start();
+  }
+
+  let workflowcountObj = new countUp.CountUp('workflowcountEle', 100000000, {
+    duration: 5,
+    suffix: '+',
+  });
+  if (!workflowcountObj.error) {
+    workflowcountObj.start();
+  }
+</script>

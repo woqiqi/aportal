@@ -22,16 +22,21 @@ sidebar:
   docs:
     about: 关于
     gettingstarted: 开始使用
-    preinstallation: 开始之前
+    preinstallation: 准备
     installation: 安装
-    initialization: 初始设置
-    example: 示例项目
+    initialization: 设置
+    thefirstworkflow: 第一支流程
+    createlist: 创建列表
+    designform: 设计表单
+    designworkflow: 设计流程并发布
+    submitworkflow: 提交流程
     introduction: 使用详解
     orgchart: 组织结构管理
-    workflow: 工作流设计
+    workflow: 流程设计
     form: 表单设计
     center: 工作流中心
     admin: 系统管理
+    weapp: 微信小程序
     common: 常见问题
     writting: 文档书写规范
     install365: 新建 SharePint 网站集和网站
